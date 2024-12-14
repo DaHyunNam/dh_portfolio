@@ -1,0 +1,172 @@
+/* 폰트 */
+h1 {
+  font-size: calc(56 / 16 * 1rem);
+  line-height: calc(32 / 16 * 1rem);
+  font-weight: 800;
+}
+h2 {
+  font-size: calc(48 / 16 * 1rem);
+  line-height: calc(30 / 16 * 1rem);
+  font-weight: 800;
+}
+h3 {
+  font-size: calc(40 / 16 * 1rem);
+  line-height: calc(28 / 16 * 1rem);
+  font-weight: 800;
+}
+h4 {
+  font-size: calc(36 / 16 * 1rem);
+  line-height: calc(28 / 16 * 1rem);
+  font-weight: 800;
+}
+h5 {
+  font-size: calc(32 / 16 * 1rem);
+  line-height: calc(28 / 16 * 1rem);
+  font-weight: 800;
+}
+h6 {
+  font-size: calc(28 / 16 * 1rem);
+  line-height: calc(24 / 16 * 1rem);
+  font-weight: 800;
+}
+h7 {
+  font-size: calc(24 / 16 * 1rem);
+  line-height: calc(22 / 16 * 1rem);
+  font-weight: 700;
+}
+p, dd, dt {
+  font-size: calc(16 / 16 * 1rem);
+  line-height: calc(22 / 16 * 1rem);
+}
+.extrabold {
+  font-weight: 800;
+}
+.bold {
+  font-weight: 700;
+}
+.normal {
+  font-weight: 400;
+}
+/* 레이아웃 */
+main {
+  padding: 0 calc(72 / 16 * 1rem);
+  max-width: calc(1600 / 16 * 1rem);
+  margin: 0 auto calc(50 / 16 * 1rem);
+}
+section h5 {
+  margin: calc(48 / 16 * 1rem) 0 calc(16 / 16 * 1rem);
+}
+footer {
+  padding: calc(50 / 16 * 1rem);
+  text-align: center;
+  background-color: #fafafa;
+}
+/* 나의 장점 */
+.point_wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: calc(24 / 16 * 1rem);
+}
+.point_wrap .point-item {
+  position: relative;
+  
+}
+.point_wrap .point-item .point-num {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(40 / 16 * 1rem);
+  height: calc(40 / 16 * 1rem);
+  border-radius: 50%;
+  background-color: #eaeaea;
+  border: 2px solid #fff;
+  position: absolute;
+  right: calc(-18 / 16 * 1rem);
+  top: 0;
+}
+.point_wrap .point-item .point-des {
+  margin-top: calc(18 / 16 * 1rem);
+  border-radius: calc(20 / 16 * 1rem);
+  padding: calc(24 / 16 * 1rem) calc(20 / 16 * 1rem);
+  background-color: #fff;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(8 / 16 * 1rem);
+  justify-content: space-between;
+}
+
+/* 경력 */
+.techlist_wrap {
+  display: flex;
+  flex-direction: column;
+}
+.techlist_wrap .techlist-item {
+  display: flex;
+  gap: calc(12 / 16 * 1rem);
+  align-items: center;
+  width: 100%;
+}
+.techlist-item p {
+  min-width: calc(80 / 16 * 1rem);
+}
+.techlist_wrap .techlist-item {
+  margin-top: calc(12 / 16 * 1rem);
+  padding-left: calc(12 / 16 * 1rem);
+}
+.techlist {
+  display: flex;
+  gap: calc(8 / 16 * 1rem);
+  align-items: center;
+  flex-wrap: wrap;
+}
+.techlist .chip {
+  display: inline-flex;
+  padding: calc(4 / 16 * 1rem) calc(8 / 16 * 1rem);
+  border-radius: calc(100 / 16 * 1rem);
+  background-color: #eaeaea;
+  align-items: center;
+  justify-content: center;
+  min-width: calc(40 / 16 * 1rem);
+  height: calc(24 / 16 * 1rem);
+  font-size: calc(14 / 16 * 1rem);
+  line-height: calc(20 / 16 * 1rem);
+  font-weight: 400;
+}
+.techlist .chip.is-active {
+  background-color: steelblue;
+  color: #fff;
+}
+.project {
+  margin-top: calc(24 / 16 * 1rem);
+  display: flex;
+  gap: calc(16 / 16 * 1rem);
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+.project .project-item {
+  width: calc(50% - 8px);
+  background-color: #fff;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: calc(20 / 16  * 1rem);
+  padding: calc(24 / 16 * 1rem) calc(20 / 16 * 1rem);
+}
+.project .project-item .project-header dd {
+  margin-top: calc(4 / 16 * 1rem);
+}
+.project .project-item .project-header dd + dt {
+margin-top: calc(12 / 16 * 1rem);
+}
+.project .project-item .project-footer {
+  margin-top: calc(16 / 16 * 1rem);
+  padding-top: calc(16 / 16 * 1rem);
+  border-top: 1px solid #eaeaea;
+}
+.project .project-item .project-footer dd {
+  margin-top: calc(8 / 16 * 1rem);
+}
+
+
+/* 반응형 */
