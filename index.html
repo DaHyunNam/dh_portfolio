@@ -3,30 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
   <title>남다현 포트폴리오</title>
 </head>
 <body>
   <!-- 헤더 -->
   <header>
     <!-- 로고 -->
-    <h1>dahyun</h1>
-    <!-- 네비 -->
+    <h1 class="logo"><a href="index.html">DH</a></h1>
   </header>
   <main>
     <!-- 배너 -->
     <section>
-    <!-- https://codepen.io/jh3y/pen/RwOeVqb (참고) -->
-    
+      <div class="banner_wrap">
+        <div class="banner-item">
+          <span class="delay01 pink">WELCOME</span>
+          <span class="delay02 yellow">DAHYUN'S</span>
+          <span class="delay03 green">PORTFOLIO</span>
+        </div>
+      </div>
     </section>
     <!-- 자기소개 -->
     <section>
       <h5>나를 소개해요.</h5>
       <div class="intro_wrap">
-        <div class="intro-img">
-
-        </div>
+        <div class="intro-img"></div>
         <div class="intro-des">
           <dl>
             <dt>이름</dt>
@@ -40,8 +41,8 @@
             </dd>
             <dt>자격증</dt>
             <dd>
-              <p>2015.09 컴활</p>
-              <p>2015.09 컴활</p>
+              <p>2015.09 ~~</p>
+              <p>2015.09 ~~</p>
             </dd>
           </dl>
         </div>
@@ -51,25 +52,19 @@
     <section>
       <h5>나의 장점을 말해요.</h5>
       <div class="point_wrap">
-        <!-- 1. 정리하는 습관 -->
         <div class="point-item">
-          <span class="point-num">1</span>
           <div class="point-des">
             <h7>정리하는 습관</h7>
             <p>정리하는 습관이 강점입니다. <br/>스스로 작성한 회의록을 팀원들과 공유합니다.</p>
           </div>
         </div>
-        <!--  2. 커뮤니케이션 -->
         <div class="point-item">
-          <span class="point-num">2</span>
           <div class="point-des">
             <h7>커뮤니케이션</h7>
             <p>기획자 혹은 디자이너와 협업 시, <br/> 시각적으로 설명하며 UI 대안을 제안합니다.</p>
           </div>
         </div>
-        <!--  3. 도전 -->
         <div class="point-item">
-          <span class="point-num">3</span>
           <div class="point-des">
             <h7>도전</h7>
             <p>새로운 프레임워크를 공부하며 습득하고, 새로운 프로젝트에서 도전을 즐깁니다.</p>
@@ -323,11 +318,102 @@
         </div>
       </div>
     </section>
-    <!-- 공지사항 -->
+    <!-- 컴포넌트 소개 -->
     <section>
-
+      <h5>컴포넌트를 소개해요.</h5>
+      <div class="accordion-list acc-default">
+        <div class="accordion-item">
+          <div class="accordion-tit">
+            <p>원형 그래프 컴포넌트</p>
+            <button type="button"></button>
+          </div>
+          <div class="accordion-content">
+            <p>1. 100% 원형 그래프</p>
+            <p class="text-inner">circleGraphType1(그래프 클래스, 최소값, 최대값, value값);</p>
+            <div class="graph-item">
+              <div class="circlebar_wrap">
+                <div class="circlebar-item">
+                  <svg width="126" height="126" viewBox="0 0 140 140" class="circlebar-type1 circlebar-green circlebar-js1">
+                    <circle r="60" cx="70" cy="70" class="circle-border"></circle>
+                    <circle r="60" cx="70" cy="70" class="circle-progress"></circle>
+                  </svg>
+                  <div class="circle-txtbox">
+                    <p class="circlebar_txt"></p>
+                  </div>
+                </div>
+              </div>
+              <p class="text-inner">circleGraphType1(".circlebar-js1", 0, 100, 50);</p>
+            </div>
+            <div class="graph-item">
+              <div class="circlebar_wrap">
+                  <div class="circlebar-item">
+                    <svg width="126" height="126" viewBox="0 0 140 140" class="circlebar-type1 circlebar-blue circlebar-js2">
+                      <circle r="60" cx="70" cy="70" class="circle-border"></circle>
+                      <circle r="60" cx="70" cy="70" class="circle-progress"></circle>
+                    </svg>
+                    <div class="circle-txtbox">
+                      <p class="circlebar_txt"></p>
+                    </div>
+                  </div>
+              </div>
+              <p class="text-inner">circleGraphType1(".circlebar-js2", 0, 100, 80);</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-tit">
+            <p>막대바 그래프 컴포넌트</p>
+            <button type="button"></button>
+          </div>
+          <div class="accordion-content">
+            <p>1. 막대바 그래프</p>
+            <p class="text-inner">basicBarFun(그래프 클래스, value값);</p>
+            <div class="graph-item">
+              <div class="bar_wrap">
+                <div class="bar-item">
+                  <div class="bar bar-js"></div>
+                </div>
+              </div>
+              <p class="text-inner">basicBarFun(".bar-js01", 70);</p>
+            </div>
+            <p>2. 쌓이는 막대바 그래프</p>
+            <p class="text-inner">stackBarFun(그래프 클래스, [{ name: 해당 바 이름, width: 바 값, bgcolor: 바 색상 }]);</p>
+            <div class="graph-item">
+              <div class="stacked-barwrap mt-4 stackedbar-js">
+                <div class="bar-item">
+                  <div class="eachbar"><span class="eachbar-value"></span></div>
+                  <div class="eachbar"><span class="eachbar-value"></span></div>
+                  <div class="eachbar"><span class="eachbar-value"></span></div>
+                </div>
+              </div>
+              <p class="text-inner">
+                stackBarFun(".stackedbar-js", [
+                { name: "국어", width: 30, bgcolor: "#88C721" },
+                { name: "영어", width: 40, bgcolor: "#FCC946" },
+                { name: "수학", width: 40, bgcolor: "#5CA7FF" }
+              ]);</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+  <!-- 푸터 -->
   <footer>Copyright 2024. DaHyunNam All rights reserved.</footer>
+  <!-- 스크립트 -->
+  <script src="./assets/js/main.js"></script>
+  <script type="module">
+    import { accordion, circleGraphType1, basicBarFun, stackBarFun} from "../../assets/js/component.js";
+    
+    accordion('.acc-default');
+    circleGraphType1(".circlebar-js1", 0, 100, 50);
+    circleGraphType1(".circlebar-js2", 0, 100, 80);
+    basicBarFun(".bar-js", 70);
+    stackBarFun(".stackedbar-js", [
+      { name: "국어", width: 30, bgcolor: "#88C721" },
+      { name: "영어", width: 30, bgcolor: "#FCC946" },
+      { name: "수학", width: 40, bgcolor: "#5CA7FF" }
+    ]);
+  </script>
 </body>
 </html>

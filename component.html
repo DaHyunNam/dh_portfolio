@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>component</title>
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+  <!-- 아코디언 -->
+  <section>
+    <div class="accordion-list acc-default">
+      <div class="accordion-item">
+        <div class="accordion-tit">
+          <p>Accordion Title 1</p>
+          <button type="button"></button>
+        </div>
+        <div class="accordion-content">
+          <p>Accordion Contents Accordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion Contents</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <!-- 그래프 -->
+  <section>
+    <!-- 원 그래프 -->
+    <div>
+      <p class="text">circlebar-js1 클래스는 작성자가 변경(마크업, js) 후 실행함수 적용 : 실행함수 circleGraphType1("circlebar-js1(작성자가 만든 차트 실행을 위한 클래스)", 최소값, 최대값, value값);</p>
+      <div class="circlebar_wrap">
+        <div class="circlebar-item">
+          <svg width="126" height="126" viewBox="0 0 140 140" class="circlebar-type1 circlebar-js1">
+            <circle r="60" cx="70" cy="70" class="circle-border"></circle>
+            <circle r="60" cx="70" cy="70" class="circle-progress"></circle>
+          </svg>
+          <div class="circle-txtbox">
+            <p class="circlebar_txt"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 막대바 그래프 -->
+    <div>
+      <p class="text">실행함수 basicBarFun("bar-js01(작성자가 만든 차트 실행을 위한 클래스)", value값(단위: 퍼센트))</p>
+      <div class="bar_wrap">
+        <div class="bar-item">
+          <div class="bar bar-js01"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 쌓이는 막대바 -->
+    <div>
+      <p class="text">실행함수 stackBarFun("작성자가 만든 차트 실행을 위한 클래스", [{ name: "해당 바 이름", width: 80(해당 w값), bgcolor: "#88C721"(해당 배경색) }])</p>
+      <div class="stacked-barwrap mt-4 stackedbar-testjs">
+          <div class="bar-item">
+              <div class="eachbar"><span class="eachbar-value"></span></div>
+              <div class="eachbar"><span class="eachbar-value"></span></div>
+              <div class="eachbar"><span class="eachbar-value"></span></div>
+          </div>
+          <!-- 범례 -->
+          <div class="legend-container"></div>
+      </div>
+  </div>
+  </section>
+  
+<script type="module">
+  import { accordion, circleGraphType1, basicBarFun, stackBarFun} from "../../assets/js/component.js";
+  accordion('.acc-default');
+  circleGraphType1(".circlebar-js1", 0, 100, 95);
+  basicBarFun(".bar-js01", 70);
+  stackBarFun(".stackedbar-testjs", [
+    { name: "탄수화물", width: 80, bgcolor: "#88C721" },
+    { name: "단백질", width: 10, bgcolor: "#FCC946" },
+    { name: "지방", width: 10, bgcolor: "#5CA7FF" }
+  ]);
+</script>
+</body>
+</html>

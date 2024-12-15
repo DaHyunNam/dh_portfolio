@@ -1,0 +1,252 @@
+/* 폰트 */
+h1 {
+  font-size: calc(56 / 16 * 1rem);
+  line-height: calc(32 / 16 * 1rem);
+  font-weight: 800;
+}
+h2 {
+  font-size: calc(48 / 16 * 1rem);
+  line-height: calc(30 / 16 * 1rem);
+  font-weight: 800;
+}
+h3 {
+  font-size: calc(40 / 16 * 1rem);
+  line-height: calc(28 / 16 * 1rem);
+  font-weight: 800;
+}
+h4 {
+  font-size: calc(36 / 16 * 1rem);
+  line-height: calc(28 / 16 * 1rem);
+  font-weight: 800;
+}
+h5 {
+  font-size: calc(32 / 16 * 1rem);
+  line-height: calc(28 / 16 * 1rem);
+  font-weight: 800;
+}
+h6 {
+  font-size: calc(28 / 16 * 1rem);
+  line-height: calc(24 / 16 * 1rem);
+  font-weight: 800;
+}
+h7 {
+  font-size: calc(24 / 16 * 1rem);
+  line-height: calc(22 / 16 * 1rem);
+  font-weight: 700;
+}
+p, dd, dt {
+  font-size: calc(16 / 16 * 1rem);
+  line-height: calc(22 / 16 * 1rem);
+}
+.extrabold {
+  font-weight: 800;
+}
+.bold {
+  font-weight: 700;
+}
+.normal {
+  font-weight: 400;
+}
+.text-inner {
+  font-size: calc(12 / 16 * 1rem);
+  line-height: calc(18 / 16 * 1rem);
+  font-weight: 400;
+}
+
+/* 아코디언 */
+.accordion-list {
+  display: flex;
+  gap: calc(16 / 16 * 1rem);
+  flex-direction: column;
+}
+.accordion-list .accordion-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;    
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.10);
+  border-radius: calc(16 / 16 * 1rem);
+  overflow: hidden;
+  padding: calc(24 / 16 * 1rem) calc(20 / 16 * 1rem);
+}
+.accordion-list .accordion-item .accordion-tit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: calc(16 / 16 * 1rem);
+  align-items: center;
+}
+.accordion-list .accordion-item .accordion-tit p {
+  width: 100%;
+  font-size: calc(16 / 16 * 1rem);                   
+  font-weight: 800;
+  line-height: calc(20 / 16 * 1rem);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-align: left;
+}
+.accordion-list .accordion-item .accordion-tit button {
+  cursor: pointer;
+}
+.accordion-list .accordion-item .accordion-tit button::after {
+  content: '';
+  display: inline-flex;
+  width: calc(16 / 16 * 1rem);  
+  height: calc(16 / 16 * 1rem);
+  background: url('../../assets/img/icon/btm_icon16_bl.png') no-repeat center;
+  background-size: cover;
+  transition: all 0.3s;
+}
+.accordion-list .accordion-item.is-active .accordion-tit button {
+  transform: rotate(-180deg);
+}
+.accordion-list .accordion-item .accordion-content {
+  height: 0;    
+  font-size: calc(14 / 16 * 1rem);  
+  font-weight: 400;
+  line-height: calc(20 / 16 * 1rem);
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  border-top: 0;
+  width: 100%;
+}
+.accordion-list .accordion-item.is-active .accordion-content {
+  display: block;    
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease-in;
+  border-top: 1px solid #ddd;
+  padding-top: calc(20 / 16 * 1rem);
+  margin-top: calc(20 / 16 * 1rem);
+}
+/* 그래프 */
+.circlebar_wrap {
+  display: flex;
+  justify-content: center;
+}
+.circlebar-item {
+  position: relative;
+  display: flex;
+}
+.circle-txtbox {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: calc(4 / 16 * 1rem);
+}
+.circle-txtbox .circlebar_txt {
+  font-size: calc(28 / 16 * 1rem);
+  font-weight: 800;
+  line-height: calc(25 / 16 * 1rem);
+  letter-spacing: calc(-0.2 / 16 * 1rem);
+  text-align: center;
+}
+.circle-txtbox .unit-txt {
+  font-size: calc(14 / 16 * 1rem);
+  font-weight: 800;
+  line-height: calc(25 / 16 * 1rem); 
+  letter-spacing: calc(-0.2 / 16 * 1rem);
+  text-align: center;
+}
+.circlebar-type1 .circle-border {
+    fill: none;
+    stroke-width: 12;
+    opacity: 0.3;
+}
+.circlebar-green .circle-border {
+  stroke: #88C721;
+}
+.circlebar-green .circle-progress {
+  stroke: #88C721;
+}
+.circlebar-blue .circle-border {
+  stroke: #5ca7ff;
+}
+.circlebar-blue .circle-progress {
+  stroke: #5ca7ff;
+}
+.circlebar-type1 .circle-progress {
+    fill: none;
+    stroke-width: 12;
+    stroke-dasharray: var(--barWidth);
+    stroke-dashoffset: var(--barWidth);
+    transform-origin: center center;
+    transform: rotate(270deg);
+    stroke-linecap: round;
+}
+.circlebar-type1 + .circlebar_txt {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: -0.96px;
+}
+
+/* 막대바 그래프 */
+.bar_wrap {
+  width: 100%;
+}
+.bar_wrap .bar-item {
+  width: 100%;
+  display: block;
+  border-radius: calc(32 / 16 * 1rem);
+  height: calc(11 / 16 * 1rem);
+  background: #F3F3F3;
+}
+.bar_wrap .bar {
+  display: block;
+  height: calc(11 / 16 * 1rem);
+  border-radius: calc(32 / 16 * 1rem);
+  background-color: #88C721;
+}
+
+/* 쌓이는 막대바 그래프 */
+.stacked-barwrap {
+  width: 100%;
+}
+.stacked-barwrap .bar-item {
+  position: relative;
+  width: 100%;
+  display: block;
+  height: calc(26 / 16 * 1rem);
+  background: #EFEFEF;
+  display: flex;
+  border-radius: calc(6 / 16* 1rem);
+}
+.stacked-barwrap .eachbar {
+  position: relative;
+  display: block;
+  height: calc(26 / 16 * 1rem);
+  background-color:var(--stacked-bg);
+  width: var(--stacked-width);
+}
+.stacked-barwrap .eachbar:first-child {
+  display: block;
+  height: calc(26 / 16 * 1rem);
+  border-radius: calc(6 / 16 * 1rem) 0 0 calc(6 / 16 * 1rem);
+}
+.stacked-barwrap .eachbar:last-child {
+  display: block;
+  height: calc(26 / 16 * 1rem);
+  border-radius: 0 calc(6 / 16 * 1rem) calc(6 / 16 * 1rem) 0;
+}
+.stacked-barwrap .eachbar:only-child {
+  display: block;
+  height: calc(26 / 16 * 1rem);
+  border-radius: calc(6 / 16 * 1rem) calc(6 / 16 * 1rem) calc(6 / 16 * 1rem) calc(6 / 16 * 1rem) ;
+}
+.stacked-barwrap .eachbar .eachbar-value  {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc(11 / 16 * 1rem);
+  font-weight: 700;
+  line-height: calc(18 / 16 * 1rem);
+}
