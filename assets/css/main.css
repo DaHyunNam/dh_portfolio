@@ -165,7 +165,10 @@ header.is-active .logo a {
 }
 .intro_wrap .intro-des dt + dd,
 .intro_wrap .intro-des dt + dd + dt {
-  margin-top: calc(8 / 16 * 1rem);
+  margin-top: calc(12 / 16 * 1rem);
+}
+.intro_wrap .intro-des dt:first-child + dd{
+  margin-top: 0;
 }
 .intro_wrap .intro-des dd p + p {
   margin-top: calc(4 / 16 * 1rem);
@@ -199,11 +202,12 @@ header.is-active .logo a {
   width: calc(40 / 16 * 1rem);
   height: calc(40 / 16 * 1rem);
   border-radius: 50%;
-  background-color: #eaeaea;
+  background-color: #f7f7f7;
   border: 2px solid #fff;
   position: absolute;
   right: calc(-18 / 16 * 1rem);
   top: calc(-18 / 16 * 1rem);
+  font-weight: 700;
 }
 .point_wrap .point-item:nth-child(2) .point-des::after {
   content: '2';
@@ -213,11 +217,12 @@ header.is-active .logo a {
   width: calc(40 / 16 * 1rem);
   height: calc(40 / 16 * 1rem);
   border-radius: 50%;
-  background-color: #eaeaea;
+  background-color: #f7f7f7;
   border: 2px solid #fff;
   position: absolute;
   right: calc(-18 / 16 * 1rem);
   top: calc(-18 / 16 * 1rem);
+  font-weight: 700;
 }
 .point_wrap .point-item:last-child .point-des::after {
   content: '3';
@@ -227,11 +232,12 @@ header.is-active .logo a {
   width: calc(40 / 16 * 1rem);
   height: calc(40 / 16 * 1rem);
   border-radius: 50%;
-  background-color: #eaeaea;
+  background-color: #f7f7f7;
   border: 2px solid #fff;
   position: absolute;
   right: calc(-18 / 16 * 1rem);
   top: calc(-18 / 16 * 1rem);
+  font-weight: 700;
 }
 
 /* 경력 */
@@ -258,6 +264,9 @@ header.is-active .logo a {
   align-items: center;
   flex-wrap: wrap;
 }
+.techlist-item .techlist .chip {
+  cursor: pointer;
+}
 .techlist .chip {
   display: inline-flex;
   padding: calc(4 / 16 * 1rem) calc(8 / 16 * 1rem);
@@ -269,10 +278,9 @@ header.is-active .logo a {
   height: calc(24 / 16 * 1rem);
   font-size: calc(14 / 16 * 1rem);
   font-weight: 400;
-  cursor: pointer;
 }
 .techlist .chip.is-active {
-  background-color: #5ca7ff;
+  background-color: #FCC946;
   color: #fff;
 }
 .project {
