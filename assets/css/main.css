@@ -145,7 +145,7 @@ header.is-active .logo a {
   width: calc(200 / 16 * 1rem);
   height: calc(200 / 16 * 1rem);
   border-radius: 50%;
-  background: url(/assets/img/main/dahyun_character.jpg) center no-repeat;
+  background: url('../img/main/dahyun_character.jpg') center no-repeat;
   background-size: contain;
   flex: 0 0 calc(200 / 16 * 1rem);
 }
