@@ -14,8 +14,14 @@ function accordionFun(selector, openIndex) {
       const itemBtn = item.querySelector(".accordion-tit button");
       if (!itemBtn) return;
       itemBtn.addEventListener("click", () => {
-          items.forEach((i) => i.classList.remove("is-active")); // 전체 비활성화
-          item.classList.toggle("is-active"); // 클릭된 항목만 토글 활성화
+        // 현재 클릭한 아이템이 활성화 상태인지 확인
+        const isActive = item.classList.contains("is-active");
+        // 모든 아이템 비활성화
+        items.forEach((i) => i.classList.remove("is-active"));
+        // 현재 클릭한 아이템만 상태 토글
+        if (!isActive) {
+          item.classList.add("is-active");
+        }
       });
     });
   });
