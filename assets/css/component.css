@@ -150,17 +150,14 @@ p, dd, dt {
     fill: none;
     stroke-width: 12;
     stroke-dasharray: var(--barWidth);
-    stroke-dashoffset: var(--barWidth);
     transform-origin: center center;
     transform: rotate(270deg);
     stroke-linecap: round;
 }
 .circlebar-type1 + .circlebar_txt {
-    font-size: 24px;
-    font-style: normal;
+    font-size: calc(24 / 16 * 1rem);
+    line-height: calc(24 / 16 * 1rem);
     font-weight: 800;
-    line-height: 24px;
-    letter-spacing: -0.96px;
 }
 
 /* 막대바 그래프 */

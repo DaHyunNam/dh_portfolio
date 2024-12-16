@@ -37,7 +37,6 @@ function circleGraphType1(el, min, max, dataValue) {
       const finalPercentValue = ((dataValue - min) / (max - min)) * 100;
       const offsetType1 = (circumferenceType1 * (1 - finalPercentValue / 100)).toFixed(3);
 
-      progressCircleType1.style.setProperty("--barNum", offsetType1);
       progressCircleType1.style.setProperty("--barWidth", circumferenceType1);
       progressCircleType1.style.strokeDashoffset = offsetType1;
 
