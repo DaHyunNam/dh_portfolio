@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="웹퍼블리셔 남다현의 포트폴리오">
   <link rel="stylesheet" href="./assets/css/index.css">
   <link rel="icon" href="./assets/img/icon/favicon.png"/> 
   <link rel="apple-touch-icon" href="./assets/img/icon/favicon.png"/> 
@@ -11,8 +12,9 @@
 <body>
   <!-- 헤더 -->
   <header>
-    <!-- 로고 -->
-    <h1 class="logo"><a href="index.html">DH</a></h1>
+    <nav aria-label="Main Navigation">
+      <h1 class="logo"><a href="index.html">DH</a></h1>
+    </nav>
   </header>
   <main>
     <!-- 배너 -->
@@ -29,7 +31,7 @@
     <section>
       <h5>나를 소개해요.</h5>
       <div class="intro_wrap">
-        <div class="intro-img"></div>
+        <div class="intro-img" role="img" aria-label="남다현 캐릭터 이미지"></div>
         <div class="intro-des">
           <dl>
             <dt>이름</dt>
@@ -104,40 +106,40 @@
         <div class="techlist-item">
           <p>설정</p>
           <ul class="techlist">
-            <li><button type="button" class="chip total is-active" data-value="all">all</button></li>
+            <li><button class="chip total is-active" data-value="all">all</button></li>
           </ul>
         </div>
         <div class="techlist-item">
           <p>기본</p>
           <ul class="techlist">
-            <li><button type="button" class="chip" data-value="html5">html5</button></li>
-            <li><button type="button" class="chip" data-value="css">css</button></li>
-            <li><button type="button" class="chip" data-value="scss">scss</button></li>
-            <li><button type="button" class="chip" data-value="js">js</button></li>
-            <li><button type="button" class="chip" data-value="jquery">jquery</button></li>
+            <li><button class="chip" data-value="html5">html5</button></li>
+            <li><button class="chip" data-value="css">css</button></li>
+            <li><button class="chip" data-value="scss">scss</button></li>
+            <li><button class="chip" data-value="js">js</button></li>
+            <li><button class="chip" data-value="jquery">jquery</button></li>
           </ul>
         </div>
         <div class="techlist-item">
           <p>프레임워크</p>
           <ul class="techlist">
-            <li><button type="button" class="chip" data-value="vue2">vue2</button></li>
-            <li><button type="button" class="chip" data-value="pug">pug</button></li>
+            <li><button class="chip" data-value="vue2">vue2</button></li>
+            <li><button class="chip" data-value="pug">pug</button></li>
           </ul>
         </div>
         <div class="techlist-item">
           <p>디자인</p>
           <ul class="techlist">
-            <li><button type="button" class="chip" data-value="photoshop">photoshop</button></li>
-            <li><button type="button" class="chip" data-value="figma">figma</button></li>
-            <li><button type="button" class="chip" data-value="zeplin">zeplin</button></li>
+            <li><button class="chip" data-value="photoshop">photoshop</button></li>
+            <li><button class="chip" data-value="figma">figma</button></li>
+            <li><button class="chip" data-value="zeplin">zeplin</button></li>
           </ul>
         </div>
         <div class="techlist-item">
           <p>형상관리</p>
           <ul class="techlist">
-            <li><button type="button" class="chip" data-value="github">github</button></li>
-            <li><button type="button" class="chip" data-value="gitlab">gitlab</button></li>
-            <li><button type="button" class="chip" data-value="svn">svn</button></li>
+            <li><button class="chip" data-value="github">github</button></li>
+            <li><button class="chip" data-value="gitlab">gitlab</button></li>
+            <li><button class="chip" data-value="svn">svn</button></li>
           </ul>
         </div>
       </div>
