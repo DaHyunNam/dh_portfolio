@@ -66,13 +66,13 @@ header.is-active .logo a {
   overflow: hidden;
   position: relative;
 }
-.banner-item span::after {
+.banner-item span:after {
   content: '';
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: var(--color, #1e90ff);
+  background: var(--color, #1e90ff); /* 변수가 없을 경우, #1e90ff 색상 사용 */
   position: absolute;
   -webkit-animation: banner-item var(--reveal-speed) var(--delay) both;
   animation: banner-item var(--reveal-speed) var(--delay) both;
