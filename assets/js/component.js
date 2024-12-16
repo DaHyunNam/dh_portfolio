@@ -1,25 +1,22 @@
 // 아코디언 기능
-function accordion(container, openIndex) {
-  document.querySelectorAll(container).forEach(accordion => {
-    const items = accordion.querySelectorAll('.accordion-item');
+function accordionFun(selector, openIndex) {
+  const containers = document.querySelectorAll(selector);
+
+  containers.forEach((accordion) => {
+    const items = accordion.querySelectorAll(".accordion-item");
 
     // 초기 활성화 처리
-    if (typeof openIndex === 'number' && items[openIndex]) {
-      items[openIndex].classList.add('is-active');
+    if (typeof openIndex === "number" && openIndex >= 0 && openIndex < items.length) {
+      items[openIndex].classList.add("is-active");
     }
 
-    // 클릭 이벤트 처리
-    accordion.addEventListener('click', event => {
-      const button = event.target.closest('button');
-      if (!button) return;
-
-      const item = button.closest('.accordion-item');
-      if (!item) return;
-
-      // 활성화 토글 처리
-      const isActive = item.classList.contains('is-active');
-      items.forEach(i => i.classList.remove('is-active')); // 전체 비활성화
-      if (!isActive) item.classList.add('is-active'); // 클릭된 항목만 활성화
+    items.forEach((item) => {
+      const itemBtn = item.querySelector(".accordion-tit button");
+      if (!itemBtn) return;
+      itemBtn.addEventListener("click", () => {
+          items.forEach((i) => i.classList.remove("is-active")); // 전체 비활성화
+          item.classList.toggle("is-active"); // 클릭된 항목만 토글 활성화
+      });
     });
   });
 }
@@ -67,7 +64,6 @@ function stackBarFun(el, stackedArray) {
     stackedBars.forEach((stackedBar) => {
       const eachBars = stackedBar.querySelectorAll(".eachbar");
       eachBars.forEach((eachBar, index) => {
-        const stackedName = stackedArray[index].name;
         const stackedNewWidth = stackedArray[index].width;
         const stackedNewBgColor = stackedArray[index].bgcolor;
 

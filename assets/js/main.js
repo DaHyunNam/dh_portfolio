@@ -7,9 +7,6 @@ function setupHeaderScroll() {
 
   window.addEventListener('scroll', () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    let windowHeight = window.innerHeight;
-    let documentHeight = document.documentElement.scrollHeight;
-
     if (scrollTop > lastScrollTop) {
       // 스크롤 내릴 때
       header.classList.add('is-active');
@@ -38,7 +35,7 @@ function setupBannerRestart() {
 
 // 키워드 필터
 function setupKeywordFiltering() {
-  const techChips = document.querySelectorAll('.techlist-item .chip:not(.react)');
+  const techChips = document.querySelectorAll('.techlist-item .chip');
   const projectItems = document.querySelectorAll('.project .project-item');
   const totalButton = document.querySelector('.chip.total');
   
@@ -99,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
   setupBannerRestart();
   setupKeywordFiltering();
 
-  accordion('.acc-default');
+  accordionFun(".acc-default",0);
   circleGraphType1(".circlebar-js1", 0, 100, 50);
   circleGraphType1(".circlebar-js2", 0, 100, 80);
   basicBarFun(".bar-js", 70);
