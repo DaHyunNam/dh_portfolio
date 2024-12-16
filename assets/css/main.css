@@ -23,7 +23,7 @@ main {
   max-width: calc(1196 / 16 * 1rem);
   margin: 0 auto calc(50 / 16 * 1rem);
 }
-section h5 {
+section h2 {
   margin: calc(70 / 16 * 1rem) 0 calc(28 / 16 * 1rem);
 }
 footer {
@@ -280,7 +280,7 @@ header.is-active .logo a {
   font-weight: 400;
 }
 .techlist .chip.is-active {
-  background-color: #FADFDF;
+  background-color: #f98fd0;
   color: #fff;
 }
 .project {
