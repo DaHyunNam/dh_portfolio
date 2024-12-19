@@ -72,29 +72,30 @@ section {
 .section01 .container.columns .text03.text03-active02 {
   display: none;
 }
+
 /* section02 */
 .section02 {
   background-color: #0E100F;
 }
-.section02 .introduce-top {
+.section02 .project-top {
   width: 100%;
   position: relative;
 }
-.section02 .introduce-top h2 {
+.section02 .project-top h2 {
   font-size: 130px;
   color: #fff;
+  padding: 20px;
 }
-.section02 .introduce-btm {
+.section02 .project-btm {
   display: flex;
   flex-direction: row;
   width: max-content;
 }
-
-.section02 .introduce-btm > .box {
+.section02 .project-btm > .box {
   height: 100vh;
+  padding: 40px;
 }
-
-.section02 .introduce-btm > .box > div {
+.section02 .project-btm > .box > div {
   display: flex;
   justify-content: flex-start;
   align-items: center;

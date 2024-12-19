@@ -43,13 +43,13 @@ function nextState() {
 gsap.delayedCall(1, nextState);
 
 // section02
-gsap.to(".introduce-btm", {
-    x: () => -document.querySelector(".introduce-btm").scrollWidth + window.innerWidth,
+gsap.to(".project-btm", {
+    x: () => -document.querySelector(".project-btm").scrollWidth + window.innerWidth,
     ease: "none",
     scrollTrigger: {
         trigger: ".section02",
         start: "top top",
-        end: () => "+=" + (document.querySelector(".introduce-btm").scrollWidth - window.innerWidth + document.querySelector(".introduce-top").offsetHeight), // 가로 스크롤 끝까지
+        end: () => "+=" + (document.querySelector(".project-btm").scrollWidth - window.innerWidth + document.querySelector(".project-top").offsetHeight), // 가로 스크롤 끝까지
         scrub: true,
         pin: ".section02",
         anticipatePin: 1,
