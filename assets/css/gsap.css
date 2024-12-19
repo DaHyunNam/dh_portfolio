@@ -1,0 +1,103 @@
+/* section 전체 */
+section {
+  height: 100vh;
+}
+/* section01 */
+.section01 {
+  background-color: #0E100F;
+  position: static;
+}
+.section01 .container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.section01 .text01, 
+.section01 .text02 {
+  font-size: 100px;
+  color: #FFFCE1;
+}
+.section01 .text01 {
+  padding: 0 6px;
+  font-weight: 300;
+  display: none;
+}
+.section01 .text02 {
+  padding: 0 6px;
+  font-weight: 400;
+  display: none;
+}
+.section01 .text03 {
+  text-align: center;
+  color: black;
+  font-size: 130px;
+  font-weight: 400;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 6px;
+}
+.section01 .text03-active01 {
+  background: #0E100F;
+  color: #FFFCE1;
+}
+.section01 .text03-active02 {
+  background: #FFFCE1;
+  color: #0E100F;
+}
+.section01 .container.final .text01, 
+.section01 .container.final .text02 {
+  display: block;
+}
+.section01 .container.plain .text03 {
+  background: transparent;
+  color: #FFFCE1;
+  padding: 0;
+}
+.section01 .container.columns .text03 {
+  padding: 0;
+  width: 100%;
+  flex-basis: 1;
+  display: block;
+}
+.section01 .container.columns .text03.text03-active01{
+  color: #FFFCE1;
+  background: #0E100F;
+  font-size: 130px;
+  width: 100%;
+}
+.section01 .container.columns .text03.text03-active02 {
+  display: none;
+}
+/* section02 */
+.section02 {
+  background-color: #0E100F;
+}
+.section02 .introduce-top {
+  width: 100%;
+  position: relative;
+}
+.section02 .introduce-top h2 {
+  font-size: 130px;
+  color: #fff;
+}
+.section02 .introduce-btm {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+}
+
+.section02 .introduce-btm > .box {
+  height: 100vh;
+}
+
+.section02 .introduce-btm > .box > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  height: 100%;
+}
