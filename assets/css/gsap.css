@@ -1,17 +1,45 @@
-/* section 전체 */
 body {
   overflow-x: hidden;
 }
-.only-mo {
-  display: none;
+
+/* section 전체 */
+section h2 {
+  font-size: 6.25rem; /* 100px in rem */
 }
-section {
-  height: 100vh;
+
+/* header */
+header {
+  background-color: #0E100F;
 }
+.logo {
+  padding: calc(12 / 16 * 1rem);
+  height: calc(48 / 16 * 1rem);
+}
+.logo a {
+  display: inline-block;
+  font-size: calc(28 / 16 * 1rem);
+  font-weight: 800;
+  color: #fff;
+}
+
+/* footer */
+footer {
+  padding: calc(100 / 16 * 1rem) 0;
+  background-color: #0E100F;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: calc(16 / 16 * 1rem);
+}
+
 /* section01 */
 .section01 {
   background-color: #0E100F;
   position: static;
+  height: calc(100vh - (48 / 16 * 1rem));
 }
 .section01 .container {
   display: flex;
@@ -29,28 +57,28 @@ section {
 }
 .section01 .text01, 
 .section01 .text02 {
-  font-size: 100px;
+  font-size: calc(100 / 16 * 1rem);
   color: #fff;
 }
 .section01 .text01 {
-  padding: 0 6px;
+  padding: 0 calc(6 / 16 * 1rem);
   font-weight: 400;
   display: none;
 }
 .section01 .text02 {
-  padding: 0 6px;
+  padding: 0 calc(6 / 16 * 1rem);
   font-weight: 400;
   display: none;
 }
 .section01 .text03 {
   text-align: center;
   color:#0E100F;
-  font-size: 100px;
+  font-size: calc(100 / 16 * 1rem);
   font-weight: 700;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 0 6px;
+  padding: 0 calc(6 / 16 * 1rem);
 }
 .section01 .text03-active01 {
   background: #0E100F;
@@ -77,9 +105,9 @@ section {
 }
 .section01 .container.columns .text03.text03-active01 {
   color: #fff;
-  background: #0E100F;
-  font-size: 120px;
+  font-size: calc(120 / 16 * 1rem);
   width: 100%;
+  background-color: transparent;
 }
 .section01 .container.columns .text03.text03-active02 {
   display: none;
@@ -94,32 +122,9 @@ section {
 }
 .section02 .project-top {
   width: 100%;
-  padding: 20px;
-}
-.section02 .project-top h2 {
-  font-size: 120px;
+  padding: calc(20 / 16 * 1rem);
   color: #fff;
 }
-/* .section02 .project-top .more {
-  background-color: #fff;
-  min-width: 180px;
-  height: 32px;
-  display: block;
-  position: relative;
-}
-.section02 .project-top .more-btn {
-  padding: 6px 12px;
-  color: #fff;
-  background-color: #0E100F;
-  border: 1px solid #fff;
-  font-size: 20px;
-  text-align: center;
-  display: inline-block;
-  min-width: 180px;
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-} */
 .section02 .project-btm {
   display: flex;
   flex-direction: row;
@@ -127,75 +132,65 @@ section {
 }
 .section02 .project-btm .box {
   position: relative;
-  padding: 0 20px;
+  padding: 0 calc(20 / 16 * 1rem);
 }
 .section02 .project-btm .box img {
-  max-width: 700px;
+  max-width: calc(700 / 16 * 1rem);
   height: auto;
   display: block;
   border-radius: 20px;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 .section02 .project-btm .box .box-inner {
   position: absolute;
   bottom: 0;
-  left: 20px;
-  width: calc(100% - 40px);
+  left: calc(20 / 16 * 1rem);
+  width: calc(100% - (40 / 16 * 1rem));
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: calc(16 / 16 * 1rem);
   border-radius: 20px;
 }
 .section02 .project-btm .box .box-inner .chip {
   background-color: #0E100F;
   color: #fff;
-  min-width: 180px;
-  height: 32px;
+  min-width: calc(180 / 16 * 1rem);
+  height: calc(32 / 16 * 1rem);
   display: block;
   position: relative;
 }
 .section02 .project-btm .box .box-inner .chip span {
-  padding: 6px 12px;
+  padding: calc(6 / 16 * 1rem) calc(12 / 16 * 1rem);
   color: #0E100F;
   background-color: #fff;
   border: 1px solid #0E100F;
-  font-size: 20px;
+  font-size: calc(20 / 16 * 1rem);
+  font-weight: 700;
   text-align: center;
   display: inline-block;
-  min-width: 180px;
+  min-width: calc(180 / 16 * 1rem);
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  left: calc(10 / 16 * 1rem);
+  bottom: calc(10 / 16 * 1rem);
 }
 .section02 .project-btm .box .box-inner .title {
   color: #fff;
-  font-size: 36px;
+  font-size: calc(36 / 16 * 1rem);
   font-weight: 700;
-  line-height: 40px;
+  line-height: calc(40 / 16 * 1rem);
   text-align: center;
 }
 .section02 .project-btm .box .box-inner .date {
   color: #fff;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: calc(24 / 16 * 1rem);
+  line-height: calc(32 / 16 * 1rem);
   text-align: center;
 }
-.section02 .project-btm02 {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.section02 .project-btm02 p {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 40px;
-  text-align: center;
-  color: #fff;
-}
+
+/* section03 */
 .section03 .accordion-list {
   display: flex;
   flex-direction: column;
@@ -205,8 +200,8 @@ section {
   flex-direction: column;
   align-items: flex-start;    
   overflow: hidden;
-  padding: calc(28 / 16 * 1rem) 0 calc(20 / 16 * 1rem);
-  border-bottom: 1px solid  #0E100F;
+  padding: calc(28 / 16 * 1rem) calc(20 / 16 * 1rem) calc(20 / 16 * 1rem);
+  border-bottom: 1px solid #0E100F;
 }
 .section03 .accordion-list .accordion-item .accordion-tit {
   width: 100%;
@@ -220,6 +215,7 @@ section {
   font-size: calc(36 / 16 * 1rem);                   
   font-weight: 800;
   text-align: left;
+  word-break: keep-all;
 }
 .section03 .accordion-list .accordion-item .accordion-tit button {
   cursor: pointer;
@@ -240,45 +236,205 @@ section {
   transition: all 0.3s ease-in;
   width: 100%;
 }
+.section03 .accordion-list .accordion-item .accordion-content .detail-top p {
+  font-size: calc(20 / 16 * 1rem);
+  line-height: calc(20 / 16 * 1rem);            
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: calc(8 / 16 * 1rem);
+}
+.section03 .accordion-list .accordion-item .accordion-content .detail-tit {
+  font-size: calc(24 / 16 * 1rem);
+  line-height: calc(24 / 16 * 1rem);                      
+  font-weight: 700;
+}
+.section03 .accordion-list .accordion-item .accordion-content .detail-top p + p {
+  margin-top: calc(16 / 16 * 1rem);
+}
+.section03 .accordion-list .accordion-item .accordion-content .detail-btm {
+  margin-top: calc(32 / 16 * 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: calc(12 / 16 * 1rem);
+}
+.section03 .accordion-list .accordion-item .accordion-content .detail-btm .techlist {
+  display: flex;
+  align-items: center;
+  gap: calc(16 / 16 * 1rem);
+}
+.section03 .accordion-list .accordion-item .accordion-content .detail-btm .techchip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(12 / 16 * 1rem);
+  font-size: calc(20 / 16 * 1rem);
+  border-radius: calc(20 / 16 * 1rem);
+  border: 1px solid #0E100F;
+  min-width: calc(100 / 16 * 1rem);
+}
 .section03 .accordion-list .accordion-item.is-active .accordion-content {
   display: block;    
   width: 100%;
   height: auto;
   transition: all 0.3s ease-in;
+  padding-top: calc(50 / 16 * 1rem);
 }
 
-@media screen and (max-width:767px) {
+/* section04 */
+.section04 {
+  margin-top: calc(100 / 16 * 1rem);
+}
+.section04 .about-top {
+  padding: 0 calc(20 / 16 * 1rem);
+}
+.section04 .about-btm {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 calc(32 / 16 * 1rem);
+  margin-top: calc(50 / 16 * 1rem);
+}
+.section04 .about-btm .imgbox {
+  flex: 0 0 calc(200 / 16 * 1rem);
+}
+.section04 .about-btm .imgbox img {
+  width: calc(200 / 16 * 1rem);
+  height: calc(200 / 16 * 1rem);
+  border-radius: 50%;
+  display: block;
+}
+.section04 .about-btm .box {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 50%;
+}
+.section04 .about-btm .box > div {
+  display: flex;
+  flex-direction: column;
+  gap: calc(4 / 16 * 1rem);
+  flex: 0 0 50%;
+}
+.section04 .about-btm .box > div:not(:first-child,:nth-child(2)) {
+  margin-top: calc(24 / 16 * 1rem);
+}
+.section04 .about-btm .box p:first-child {
+  font-size: calc(20 / 16 * 1rem);
+  font-weight: 700;
+}
+.section04 .about-btm .box p {
+  font-size: calc(20 / 16 * 1rem);
+  line-height: calc(24 / 16 * 1rem);
+  font-weight: 400;
+  word-break: break-all;
+}
+
+/* section05 */
+.section05 {
+  margin-top: calc(50 / 16 * 1rem);
+  background-color: #0E100F;
+  position: relative;
+  overflow: hidden; 
+}
+.section05 p {
+  font-size: calc(30 / 16 * 1rem);
+  line-height: calc(36 / 16 * 1rem);
+  font-weight: 400;
+  color: #fff;
+  padding: calc(20 / 16 * 1rem);
+}
+.section05 ol {
+  display: flex;
+  align-items: center;
+  gap: calc(16 / 16 * 1rem);
+  white-space: nowrap; 
+  animation: scrollEffect 40s linear infinite;
+}
+.section05 ol li {
+  font-size: calc(30 / 16 * 1rem);
+  line-height: calc(36 / 16 * 1rem);
+  font-weight: 400;
+  color: #fff;
+}
+
+@keyframes scrollEffect {
+  0% { 
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% { 
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section h2 {
+    font-size: calc(40 / 16 * 1rem);
+  }
   .section01 .text01, 
   .section01 .text02 {
-    font-size: 40px;
-    padding: 0 3px;
+    font-size: calc(40 / 16 * 1rem);
+    padding: 0 calc(3 / 16 * 1rem);
   }
   .section01 .text03 {
-    font-size: 40px;
-    padding: 0 3px;
+    font-size: calc(40 / 16 * 1rem);
+    padding: 0 calc(3 / 16 * 1rem);
   }
   .section01 .container.columns .text03.text03-active01 {
-    font-size: 48px;
+    font-size: calc(48 / 16 * 1rem);
   }
   .section02 .project-top {
     width: 100%;
-    gap: 8px;
-    padding: 10px;
-  }
-  .section02 .project-top h2 {
-    font-size: 40px;
+    padding: calc(16 / 16 * 1rem);
+    font-size: calc(40 / 16 * 1rem);
     color: #fff;
-    width: 100%;
   }
-  .section02 .project-top .more {
-    background-color: transparent;
-    min-width: 120px;
+  .section03 .accordion-list .accordion-item {
+    padding: calc(28 / 16 * 1rem) calc(16 / 16 * 1rem) calc(20 / 16 * 1rem);
   }
-  .section02 .project-top .more-btn {
-    font-size: 16px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    min-width: 120px;
+  .section03 .accordion-list .accordion-item .accordion-tit p {
+    font-size: calc(28 / 16 * 1rem);                   
+  }
+  .section03 .accordion-list .accordion-item .accordion-content .detail-top p {
+    font-size: calc(16 / 16 * 1rem);
+  }
+  .section03 .accordion-list .accordion-item .accordion-content .detail-tit {
+    font-size: calc(20 / 16 * 1rem);
+  }
+  .section03 .accordion-list .accordion-item .accordion-content .detail-btm .techlist {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: calc(8 / 16 * 1rem);
+    row-gap: calc(12 / 16 * 1rem);
+  }
+  .section03 .accordion-list .accordion-item .accordion-content .detail-btm .techchip {
+    font-size: calc(16 / 16 * 1rem);
+    min-width: calc(78 / 16 * 1rem);
+  }
+  .section04 {
+    margin-top: calc(50 / 16 * 1rem);
+  }
+  .section04 .about-top {
+    padding:0 calc(16 / 16 * 1rem);
+  }
+  .section04 .about-btm {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 calc(16 / 16 * 1rem);
+    margin-top: calc(32 / 16 * 1rem);
+  }
+  .section04 .about-btm .box {
+    margin-top: calc(32 / 16 * 1rem);
+  }
+  .section04 .about-btm .box p:first-child {
+    font-size: calc(16 / 16 * 1rem);
+  }
+  .section04 .about-btm .box p {
+    font-size: calc(14 / 16 * 1rem);
+    line-height: calc(20 / 16 * 1rem);
+  }
+  .section05 p {
+    padding: calc(16 / 16 * 1rem);
   }
 }

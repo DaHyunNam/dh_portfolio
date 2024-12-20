@@ -4,27 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="gsap">
-  <!-- <link rel="stylesheet" href="./assets/css/index.css"> -->
   <link rel="icon" href="./assets/img/icon/favicon.png"/> 
   <link rel="apple-touch-icon" href="./assets/img/icon/favicon.png"/> 
-  <link rel="stylesheet" href="./assets/css/gsap.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/gsap.css">
   <script src="./assets/gsap/gsap.min.js"></script>
   <script src="./assets/gsap/Flip.min.js"></script>
   <script src="./assets/gsap/ScrollTrigger.min.js"></script>
   <title>gsap test</title>
 </head>
 <body>
+  <!-- header -->
   <header>
-
+    <nav>
+      <h1 class="logo"><a href="index.html">DH</a></h1>
+    </nav>
   </header>
   <main>
     <!-- intro -->
     <section class="section01 intro">
+      <h2 class="ir-text">intro</h2>
       <div class="container final">
         <div class="text01">HELLO!</div>
         <div class="textbox">
-          <div class="text02">I AM</div>
+          <div class="text02">I'M</div>
           <div class="text03 text03-active01">DA</div>
           <div class="text03 text03-active02">HYUN</div>
         </div>
@@ -32,9 +35,7 @@
     </section>
     <!-- PROJECTS -->
     <section class="section02 project">
-      <div class="project-top">
-        <h2>LOREM</h2>
-      </div>
+      <h2 class="project-top">PROJECTS</h2>
       <div class="project-btm">
         <div class="box">
           <img src="./assets/img/main/mireaesset_main.png" alt="미래에셋 생명 헬스케어 메인 이미지">
@@ -48,7 +49,7 @@
           <img src="./assets/img/main/hyndaiNbrand_main.png" alt="현대 N 브랜드 메인 이미지">
           <div class="box-inner">
             <div class="chip"><span>WEB & MOBLIE</span></div>
-            <p class="title"><strong>2.</strong>hyndai N brand</p>
+            <p class="title"><strong>2.</strong>Hyndai N brand</p>
             <p class="date">2024.05 - 2024.07</p>
           </div>
         </div>
@@ -56,7 +57,7 @@
           <img src="./assets/img/main/lg_global_main.png" alt="엘지전자 글로벌 메인 이미지">
           <div class="box-inner">
             <div class="chip"><span>WEB & MOBLIE</span></div>
-            <p class="title"><strong>3.</strong>lg Global electronics</p>
+            <p class="title"><strong>3.</strong>LG Global electronics</p>
             <p class="date">2023.11 - 2024.04</p>
           </div>
         </div>
@@ -72,7 +73,7 @@
           <img src="./assets/img/main/lg_main.png" alt="엘지전자 메인 이미지">
           <div class="box-inner">
             <div class="chip"><span>WEB & MOBLIE</span></div>
-            <p class="title"><strong>5.</strong>lg electronics</p>
+            <p class="title"><strong>5.</strong>LG electronics</p>
             <p class="date">2022.06 - 2023.04</p>
           </div>
         </div>
@@ -93,81 +94,249 @@
           </div>
         </div>
       </div>
-      <div class="project-btm02">
-        <p>IN MORE DETAIL</p>
-      </div>
     </section>
     <!-- PROJECTS(detail) -->
     <section class="section03 detail">
-      <div class="accordion-list acc-default">
+      <h2 class="ir-text">PROJECTS detail</h2>
+      <div class="accordion-list accordion-project">
         <div class="accordion-item">
           <div class="accordion-tit">
-            <p>Accordion Title 1</p>
+            <p>미래에셋생명 헬스케어 구축</p>
             <button type="button"></button>
           </div>
           <div class="accordion-content">
-            <p>AccordionAccordionAccordionAccordionAccordionAccordion</p>
+            <div class="detail-top">
+                <p><strong class="detail-tit">개요</strong>사용자의 건강을 관리하고 올바른 습관 형성을 유도하며, 데이터를 시각적으로 제공</p>
+                <p><strong class="detail-tit">기간</strong>2024.07 - 2024.11</p>
+                <p><strong class="detail-tit">기여도</strong>퍼블리싱 100%</p>
+                <p><strong class="detail-tit">작업</strong>컴포넌트 및 전체 페이지 퍼블리싱</p>
+            </div>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">html5</li>
+                <li class="techchip">scss</li>
+                <li class="techchip">js</li>
+                <li class="techchip">github</li>
+                <li class="techchip">figma</li>
+                <li class="techchip">jira</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="accordion-item">
           <div class="accordion-tit">
-            <p>Accordion Title 2</p>
+            <p>현대 N브랜드 리뉴얼</p>
             <button type="button"></button>
           </div>
           <div class="accordion-content">
-            <p>AccordionAccordionAccordionAccordionAccordionAccordion</p>
+            <div class="detail-top">
+                <p><strong class="detail-tit">개요</strong>현대자동차의 고성능 브랜드 소개 페이지로, 레이싱카 회원들이 UI에 쉽게 접근할 수 있도록 최적화된 페이지 제공</p>
+                <p><strong class="detail-tit">기간</strong>2024.05 - 2024.07</p>
+                <p><strong class="detail-tit">기여도</strong>퍼블리싱 100%</p>
+                <p><strong class="detail-tit">작업</strong>컴포넌트 및 전체 페이지 퍼블리싱</p>
+            </div>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">html5</li>
+                <li class="techchip">scss</li>
+                <li class="techchip">jquery</li>
+                <li class="techchip">github</li>
+                <li class="techchip">figma</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="accordion-item">
           <div class="accordion-tit">
-            <p>Accordion Title 3</p>
+            <p>LG 글로벌 페이지 운영</p>
             <button type="button"></button>
           </div>
           <div class="accordion-content">
-            <p>AccordionAccordionAccordionAccordionAccordionAccordion</p>
+            <div class="detail-top">
+                <p><strong class="detail-tit">개요</strong>LG 글로벌 사용자의 사용성 및 편의성을 위해 Global One Platform을 운영</p>
+                <p><strong class="detail-tit">기간</strong>2023.11 - 2024.04</p>
+                <p><strong class="detail-tit">기여도</strong>퍼블리싱 100%</p>
+                <p><strong class="detail-tit">작업</strong>오픈 예정인 각 국가 페이지 퍼블리싱</p>
+            </div>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">pug</li>
+                <li class="techchip">scss</li>
+                <li class="techchip">js</li>
+                <li class="techchip">gitlab</li>
+                <li class="techchip">figma</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="accordion-item">
           <div class="accordion-tit">
-            <p>Accordion Title 4</p>
+            <p>미디어로그 기업형 메시지 홈페이지 구축</p>
             <button type="button"></button>
           </div>
           <div class="accordion-content">
-            <p>AccordionAccordionAccordionAccordionAccordionAccordion</p>
+            <div class="detail-top">
+                <p><strong class="detail-tit">개요</strong>개인 및 단체 사업자가 브랜드를 등록해 기존 문자를 진화시킨 차세대 모바일 커뮤니케이션 서비스를 제공</p>
+                <p><strong class="detail-tit">기간</strong>2023.05 - 2023.10</p>
+                <p><strong class="detail-tit">기여도</strong>퍼블리싱 100%</p>
+                <p><strong class="detail-tit">작업</strong>전체 페이지 퍼블리싱</p>
+            </div>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">vue2</li>
+                <li class="techchip">scss</li>
+                <li class="techchip">js</li>
+                <li class="techchip">gitlab</li>
+                <li class="techchip">figma</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="accordion-item">
           <div class="accordion-tit">
-            <p>Accordion Title 5</p>
+            <p>LG전자 컨텐츠 운영</p>
             <button type="button"></button>
           </div>
           <div class="accordion-content">
-            <p>AccordionAccordionAccordionAccordionAccordionAccordion</p>
+            <div class="detail-top">
+                <p><strong>개요</strong>사용자들에게 매달 다양한 기획전 및 이벤트를 통해 정보 제공</p>
+                <p><strong>기간</strong>2022.06 - 2023.04</p>
+                <p><strong>기여도</strong>퍼블리싱 100%</p>
+                <p><strong>작업</strong>기획전, 이벤트, B2B, 오픈마켓 페이지 퍼블리싱</p>
+            </div>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">html5</li>
+                <li class="techchip">css</li>
+                <li class="techchip">js</li>
+                <li class="techchip">wcms</li>
+                <li class="techchip">photoshop</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="accordion-item">
           <div class="accordion-tit">
-            <p>Accordion Title 6</p>
+            <p>현대카드 법인 모바일 구축</p>
             <button type="button"></button>
           </div>
           <div class="accordion-content">
-            <p>AccordionAccordionAccordionAccordionAccordionAccordion</p>
+            <div class="detail-top">
+                <p><strong class="detail-tit">개요</strong>현대카드 법인 사용자를 위한 화면 개선으로 사용성 향상</p>
+                <p><strong class="detail-tit">기간</strong>2022.03 - 2022.06</p>
+                <p><strong class="detail-tit">기여도</strong>퍼블리싱 70%</p>
+                <p><strong class="detail-tit">작업</strong>고객센터, 업무지원, 혜택, 카드 상세페이지 퍼블리싱</p>
+            </div>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">html5</li>
+                <li class="techchip">css</li>
+                <li class="techchip">jquery</li>
+                <li class="techchip">svn</li>
+                <li class="techchip">jira</li>
+                <li class="techchip">zeplin</li>
+              </ul>
+            </div>
           </div>
         </div>
-
+        <div class="accordion-item">
+          <div class="accordion-tit">
+            <p>아모레퍼시픽 사이트 운영</p>
+            <button type="button"></button>
+          </div>
+          <div class="accordion-content">
+            <div class="detail-top">
+                <p><strong class="detail-tit">개요</strong>아모레퍼시픽의 다양한 브랜드 자사 홈페이지 운영</p>
+                <p><strong class="detail-tit">기간</strong>2022.01 - 2022.02</p>
+                <p><strong class="detail-tit">기여도</strong>퍼블리싱 50%</p>
+                <p><strong class="detail-tit">작업</strong>pdp 페이지 퍼블리싱</p>
+            </div>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">html5</li>
+                <li class="techchip">css</li>
+                <li class="techchip">jquery</li>
+                <li class="techchip">photoshop</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- About -->
-    <section class="">
-      
+    <!-- ABOUT -->
+    <section class="section04 about">
+      <h2 class="about-top">ABOUT ME</h2>
+      <div class="about-btm">
+        <div class="imgbox">
+          <img src="./assets/img/main/dahyun_character.jpg" alt="남다현 캐릭터 이미지">
+        </div>
+        <div class="box">
+          <div>
+            <p>이름</p>
+            <p>남다현</p>
+          </div>
+          <div>
+            <p>이메일</p>
+            <p class="font14">dahyun123410@gmail.com</p>
+          </div>
+          <div>
+            <p>학력</p>
+            <p>안동대학교<br/> 신소재공학전공</p>
+            <p>2014.03 - 2018.02</p>
+          </div>
+          <div>
+            <p>교육이수</p>
+            <p>웹디자인 과정 이수</p>
+            <p>SBS아카데미 컴퓨터아트<br/> 대구지점</p>
+            <p>2021.01 - 2021.11</p>
+          </div>
+          <div>
+            <p>경력</p>
+            <p>더피프피원</p>
+            <p>2022.01 - 2024.01</p>
+            <p>더피프피원엑스</p>
+            <p>2024.02 ~ 현재</p>
+          </div>
+          <div>
+            <p>자격증</p>
+            <p>GTQ 그래픽기술자격</p>
+            <p>인터넷정보기술(ITQ)</p>
+            <p>컴퓨터활용능력2급</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section05 introduce">
+      <h2 class="ir-text">introduce</h2>
+      <div>
+        <p>MY KEYWORD</p>
+        <ol>
+          <li>1. EXPERIENCE</li>
+          <li>2. LEARNING</li>
+          <li>3. METICULOUS</li>
+          <li>4. POSITIVE</li>
+        </ol>
+      </div>
     </section>
   </main>
+  <!-- footer -->
+  <footer>
+    <p>THANK YOU</p>
+    <p>Copyright 2024. DaHyunNam All rights reserved.</p>
+  </footer>
   <script src="./assets/js/gsapcustom.js"></script>
-  <!-- <script src="./assets/js/main.js"></script> -->
   <script src="./assets/js/component.js"></script>
   <script>
+
     document.addEventListener('DOMContentLoaded', function () {
-      accordionFun(".acc-default",0);
+      accordionFun(".accordion-project",0);
     });
   </script>
 </body>

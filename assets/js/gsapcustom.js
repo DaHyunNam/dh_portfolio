@@ -70,3 +70,75 @@ gsap.to(".project-btm", {
         anticipatePin: 1, // 핀을 미리 잡아주는 정도 설정 (부드러운 애니메이션)
     },
 });
+
+//section04
+ // about-top 애니메이션
+gsap.from(".about-top", {
+    opacity: 0,
+    y: -50,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".section04.about",
+        start: "top 80%", // 시작 지점 (화면의 80% 지점에 도달하면 시작)
+        end: "top 50%", // 종료 지점
+        toggleActions: "play none none reverse" // 스크롤 방향에 따른 동작
+    }
+});
+
+gsap.from(".about-btm .imgbox", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".section04.about",
+        start: "top 70%", 
+        toggleActions: "play none none reverse"
+    }
+});
+
+gsap.from(".about-btm .box", {
+    opacity: 0,
+    x: 100,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".section04.about",
+        start: "top 60%", // 시작 지점
+        toggleActions: "play none none reverse"
+    }
+});
+
+ // Section05 등장 애니메이션
+gsap.from(".section05", {
+    y: 100, // 아래에서 위로 올라오게 설정
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".section04.about", // section04 기준으로 트리거 설정
+        start: "bottom 80%", // section04 끝날 때 시작
+        toggleActions: "play none none reverse",
+    }
+});
+
+function loopHorizontalScroll() {
+    const list = document.querySelector('.section05 ol');
+    const items = Array.from(list.children); 
+    const listWidth = list.offsetWidth;
+
+    // 복제된 요소 추가
+    items.forEach(item => {
+        const clone = item.cloneNode(true);
+        list.appendChild(clone);
+    });
+}
+
+// 애니메이션 시작
+loopHorizontalScroll();
+
+
+
+
+

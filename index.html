@@ -3,431 +3,341 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="웹퍼블리셔 남다현의 포트폴리오">
-  <link rel="stylesheet" href="./assets/css/index.css">
+  <meta name="description" content="gsap">
   <link rel="icon" href="./assets/img/icon/favicon.png"/> 
   <link rel="apple-touch-icon" href="./assets/img/icon/favicon.png"/> 
-  <title>남다현 포트폴리오</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/gsap.css">
+  <script src="./assets/gsap/gsap.min.js"></script>
+  <script src="./assets/gsap/Flip.min.js"></script>
+  <script src="./assets/gsap/ScrollTrigger.min.js"></script>
+  <title>gsap test</title>
 </head>
 <body>
-  <!-- 헤더 -->
+  <!-- header -->
   <header>
     <nav>
       <h1 class="logo"><a href="index.html">DH</a></h1>
     </nav>
   </header>
   <main>
-    <!-- 배너 -->
-    <section>
-      <div class="banner_wrap">
-        <div class="banner-item">
-          <span class="delay01 pink">WELCOME TO</span>
-          <span class="delay02 yellow">DAHYUN'S</span>
-          <span class="delay03 green">PORTFOLIO</span>
+    <!-- intro -->
+    <section class="section01 intro">
+      <h2 class="ir-text">intro</h2>
+      <div class="container final">
+        <div class="text01">HELLO!</div>
+        <div class="textbox">
+          <div class="text02">I'M</div>
+          <div class="text03 text03-active01">DA</div>
+          <div class="text03 text03-active02">HYUN</div>
         </div>
       </div>
     </section>
-    <!-- 자기소개 -->
-    <section>
-      <h2>나를 소개해요.</h2>
-      <div class="intro_wrap">
-        <div class="intro-img" role="img" aria-label="남다현 캐릭터 이미지"></div>
-        <div class="intro-des">
-          <dl>
-            <dt>이름</dt>
-            <dd>남다현</dd>
-            <dt>이메일</dt>
-            <dd>dahyun123410@gmail.com</dd>
-            <dt>학력</dt>
-            <dd>
-              <p>안동대학교 신소재공학전공</p>
-              <p>2014.03 ~ 2018.02</p>
-            </dd>
-            <dt>교육이수</dt>
-            <dd>
-              <p>웹디자인 과정 이수</p>
-              <p>SBS아카데미 컴퓨터아트 대구지점</p>
-              <p>2021.01 ~ 2021.11</p>
-            </dd>
-            <dt>경력</dt>
-            <dd>
-              <p>더피프피원</p>
-              <p>2022.01 ~ 2024.01</p>
-              <p>더피프피원엑스</p>
-              <p>2024.02 ~ 현재</p>
-            </dd>
-            <dt>자격증</dt>
-            <dd>
-              <p>GTQ 그래픽기술자격</p>
-              <p>인터넷정보기술(ITQ)</p>
-              <p>컴퓨터활용능력2급</p>
-            </dd>
-            <dt>소개</dt>
-            <dd>
-              안녕하세요. 3년차 퍼블리셔 남다현입니다.
-              여러 프로젝트의 경험을 바탕으로 코드 재사용성에 용이한 컴포넌트 기반 작업을 할 수 있으며, 
-              다양한 프레임워크를 배우며 꾸준히 노력하고 있습니다. 
-              배움과 경험을 통해 프로젝트에서 가치 있는 퍼블리셔가 되겠습니다.
-            </dd>
-          </dl>
-        </div>
-      </div>
-    </section>
-    <!-- 나의 장점 -->
-    <section>
-      <h2>나의 장점을 말해요.</h2>
-      <div class="point_wrap">
-        <div class="point-item">
-          <div class="point-des">
-            <h3>정리하는 습관</h3>
-            <p>정리하는 습관이 강점입니다. <br/>스스로 작성한 회의록을 팀원들과 공유합니다.</p>
+    <!-- PROJECTS -->
+    <section class="section02 project">
+      <h2 class="project-top">PROJECTS</h2>
+      <div class="project-btm">
+        <div class="box">
+          <img src="./assets/img/main/mireaesset_main.png" alt="미래에셋 생명 헬스케어 메인 이미지">
+          <div class="box-inner">
+            <div class="chip"><span>APP</span></div>
+            <p class="title"><strong>1.</strong>Mireaesset HealthCare</p>
+            <p class="date">2024.07 - 2024.12</p>
           </div>
         </div>
-        <div class="point-item">
-          <div class="point-des">
-            <h3>커뮤니케이션</h3>
-            <p>기획자 혹은 디자이너와 협업 시, <br/> 시각적으로 설명하며 UI 대안을 제안합니다.</p>
+        <div class="box">
+          <img src="./assets/img/main/hyndaiNbrand_main.png" alt="현대 N 브랜드 메인 이미지">
+          <div class="box-inner">
+            <div class="chip"><span>WEB & MOBLIE</span></div>
+            <p class="title"><strong>2.</strong>Hyndai N brand</p>
+            <p class="date">2024.05 - 2024.07</p>
           </div>
         </div>
-        <div class="point-item">
-          <div class="point-des">
-            <h3>도전</h3>
-            <p>새로운 프레임워크를 공부하며 습득하고, 새로운 프로젝트에서 도전을 즐깁니다.</p>
+        <div class="box">
+          <img src="./assets/img/main/lg_global_main.png" alt="엘지전자 글로벌 메인 이미지">
+          <div class="box-inner">
+            <div class="chip"><span>WEB & MOBLIE</span></div>
+            <p class="title"><strong>3.</strong>LG Global electronics</p>
+            <p class="date">2023.11 - 2024.04</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="./assets/img/main/rbc_main.png" alt="미디어로그 RCS  메인 이미지">
+          <div class="box-inner">
+            <div class="chip"><span>WEB & MOBLIE</span></div>
+            <p class="title"><strong>4.</strong>RCS Biz Center</p>
+            <p class="date">2022.05 - 2023.10</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="./assets/img/main/lg_main.png" alt="엘지전자 메인 이미지">
+          <div class="box-inner">
+            <div class="chip"><span>WEB & MOBLIE</span></div>
+            <p class="title"><strong>5.</strong>LG electronics</p>
+            <p class="date">2022.06 - 2023.04</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="./assets/img/main/hyundaicard_main.png" alt="현대카드 메인 이미지">
+          <div class="box-inner">
+            <div class="chip"><span>WEB & MOBLIE</span></div>
+            <p class="title"><strong>6.</strong>HyundaiCard(company)</p>
+            <p class="date">2022.03 - 2022.06</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="./assets/img/main/amorepacific_main.png" alt="아모레퍼시픽 메인 이미지">
+          <div class="box-inner">
+            <div class="chip"><span>WEB & MOBLIE</span></div>
+            <p class="title"><strong>7.</strong>Amorepacific</p>
+            <p class="date">2022.01 - 2022.02</p>
           </div>
         </div>
       </div>
     </section>
-    <!-- 경력 -->
-    <section>
-      <h2>나의 경력을 말해요.</h2>
-      <!-- 선택하기 : 기술 스택 -->
-      <div class="techlist_wrap">
-        <p>키워드 버튼을 클릭해 보세요.</p>
-        <div class="techlist-item">
-          <p>설정</p>
-          <ul class="techlist">
-            <li><button class="chip total is-active" data-value="all">all</button></li>
-          </ul>
-        </div>
-        <div class="techlist-item">
-          <p>기본</p>
-          <ul class="techlist">
-            <li><button class="chip" data-value="html5">html5</button></li>
-            <li><button class="chip" data-value="css">css</button></li>
-            <li><button class="chip" data-value="scss">scss</button></li>
-            <li><button class="chip" data-value="js">js</button></li>
-            <li><button class="chip" data-value="jquery">jquery</button></li>
-          </ul>
-        </div>
-        <div class="techlist-item">
-          <p>프레임워크</p>
-          <ul class="techlist">
-            <li><button class="chip" data-value="vue2">vue2</button></li>
-            <li><button class="chip" data-value="pug">pug</button></li>
-          </ul>
-        </div>
-        <div class="techlist-item">
-          <p>디자인</p>
-          <ul class="techlist">
-            <li><button class="chip" data-value="photoshop">photoshop</button></li>
-            <li><button class="chip" data-value="figma">figma</button></li>
-            <li><button class="chip" data-value="zeplin">zeplin</button></li>
-          </ul>
-        </div>
-        <div class="techlist-item">
-          <p>형상관리</p>
-          <ul class="techlist">
-            <li><button class="chip" data-value="github">github</button></li>
-            <li><button class="chip" data-value="gitlab">gitlab</button></li>
-            <li><button class="chip" data-value="svn">svn</button></li>
-          </ul>
-        </div>
-      </div>
-      <!-- 경력 리스트 -->
-      <div class="project">
-        <div class="project-item">
-          <dl class="project-header">
-            <dt>프로젝트명</dt>
-            <dd>미래에셋생명 헬스케어 구축</dd>
-            <dt>기간</dt>
-            <dd>2024.07 ~ 2024.12</dd>
-            <dt>기여도</dt>
-            <dd>100%</dd>
-            <dt>작업</dt>
-            <dd>컴포넌트 및 전체 페이지 퍼블리싱</dd>
-          </dl>
-          <dl class="project-footer">
-            <dt>기술스택</dt>
-            <dd>
-              <ul class="techlist">
-                <li class="chip" data-value="html5">html5</li>
-                <li class="chip" data-value="scss">scss</li>
-                <li class="chip" data-value="js">js</li>
-                <li class="chip" data-value="github">github</li>
-                <li class="chip" data-value="figma">figma</li>
-                <li class="chip">jira</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-        <div class="project-item">
-          <dl class="project-header">
-            <dt>프로젝트명</dt>
-            <dd>현대N브랜드 리뉴얼</dd>
-            <dt>기간</dt>
-            <dd>2024.05 ~ 2024.07</dd>
-            <dt>기여도</dt>
-            <dd>100%</dd>
-            <dt>작업</dt>
-            <dd>컴포넌트 및 전체 페이지 퍼블리싱</dd>
-          </dl>
-          <dl class="project-footer">
-            <dt>기술스택</dt>
-            <dd>
-              <ul class="techlist">
-                <li class="chip" data-value="html5">html5</li>
-                <li class="chip" data-value="css">css</li>
-                <li class="chip" data-value="js">js</li>
-                <li class="chip" data-value="github">github</li>
-                <li class="chip" data-value="figma">figma</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-        <div class="project-item">
-          <dl class="project-header">
-            <dt>프로젝트명</dt>
-            <dd>LG 글로벌 페이지 운영</dd>
-            <dt>기간</dt>
-            <dd>2023.11 ~ 2024.04</dd>
-            <dt>기여도</dt>
-            <dd>100%</dd>
-            <dt>작업</dt>
-            <dd>오픈 예정인 각 국가 페이지 퍼블리싱</dd>
-          </dl>
-          <dl class="project-footer">
-            <dt>기술스택</dt>
-            <dd>
-              <ul class="techlist">
-                <li class="chip" data-value="pug">pug</li>
-                <li class="chip" data-value="scss">scss</li>
-                <li class="chip" data-value="js">js</li>
-                <li class="chip" data-value="gitlab">gitlab</li>
-                <li class="chip" data-value="figma">figma</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-        <div class="project-item">
-          <dl class="project-header">
-            <dt>프로젝트명</dt>
-            <dd>미디어로그 기업형 메시지 홈페이지 구축</dd>
-            <dt>기간</dt>
-            <dd>2023.05 ~ 2023.10</dd>
-            <dt>기여도</dt>
-            <dd>100%</dd>
-            <dt>작업</dt>
-            <dd>전체 페이지 퍼블리싱</dd>
-          </dl>
-          <dl class="project-footer">
-            <dt>기술스택</dt>
-            <dd>
-              <ul class="techlist">
-                <li class="chip" data-value="vue2">vue2</li>
-                <li class="chip" data-value="scss">scss</li>
-                <li class="chip" data-value="js">js</li>
-                <li class="chip">chartjs</li>
-                <li class="chip" data-value="gitlab">gitlab</li>
-                <li class="chip" data-value="figma">figma</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-        <div class="project-item">
-          <dl class="project-header">
-            <dt>프로젝트명</dt>
-            <dd>LG전자 컨텐츠 운영</dd>
-            <dt>기간</dt>
-            <dd>2022.06 ~ 2023.04</dd>
-            <dt>기여도</dt>
-            <dd>100%</dd>
-            <dt>작업</dt>
-            <dd>기획전, 이벤트, B2B, 오픈마켓 페이지 퍼블리싱</dd>
-          </dl>
-          <dl class="project-footer">
-            <dt>기술스택</dt>
-            <dd>
-              <ul class="techlist">
-                <li class="chip" data-value="html5">html5</li>
-                <li class="chip" data-value="css">css</li>
-                <li class="chip" data-value="js">js</li>
-                <li class="chip">wcms</li>
-                <li class="chip" data-value="photoshop">photoshop</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-        <div class="project-item">
-          <dl class="project-header">
-            <dt>프로젝트명</dt>
-            <dd>현대카드 법인 모바일 구축</dd>
-            <dt>기간</dt>
-            <dd>2022.03 ~ 2022.06</dd>
-            <dt>기여도</dt>
-            <dd>50%</dd>
-            <dt>작업</dt>
-            <dd>고객센터, 업무지원, 혜택, 카드 상세페이지 퍼블리싱</dd>
-          </dl>
-          <dl class="project-footer">
-            <dt>기술스택</dt>
-            <dd>
-              <ul class="techlist">
-                <li class="chip" data-value="html5">html5</li>
-                <li class="chip" data-value="css">css</li>
-                <li class="chip" data-value="jquery">jquery</li>
-                <li class="chip" data-value="svn">svn</li>
-                <li class="chip">jira</li>
-                <li class="chip" data-value="zeplin">zeplin</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-        <div class="project-item">
-          <dl class="project-header">
-            <dt>프로젝트명</dt>
-            <dd>아모레퍼시픽 사이트 운영</dd>
-            <dt>기간</dt>
-            <dd>2022.01 ~ 2022.02</dd>
-            <dt>기여도</dt>
-            <dd>50%</dd>
-            <dt>작업</dt>
-            <dd>pdp 페이지 퍼블리싱</dd>
-          </dl>
-          <dl class="project-footer">
-            <dt>기술스택</dt>
-            <dd>
-              <ul class="techlist">
-                <li class="chip" data-value="html5">html5</li>
-                <li class="chip" data-value="css">css</li>
-                <li class="chip" data-value="jquery">jquery</li>
-                <li class="chip" data-value="photoshop">photoshop</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-        <div class="project-item">
-          <dl class="project-header">
-            <dt>프로젝트명</dt>
-            <dd>우리은행 알뜰폰 제안 작업</dd>
-            <dt>기간</dt>
-            <dd>2024.05(1일)</dd>
-            <dt>기여도</dt>
-            <dd>100%</dd>
-            <dt>작업</dt>
-            <dd>제안 퍼블리싱</dd>
-          </dl>
-          <dl class="project-footer">
-            <dt>기술스택</dt>
-            <dd>
-              <ul class="techlist">
-                <li class="chip" data-value="html5">html5</li>
-                <li class="chip" data-value="css">css</li>
-                <li class="chip" data-value="js">js</li>
-                <li class="chip" data-value="github">github</li>
-                <li class="chip" data-value="figma">figma</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-      </div>
-    </section>
-    <!-- 컴포넌트 소개 -->
-    <section>
-      <h2>컴포넌트를 소개해요.</h2>
-      <div class="accordion-list acc-default">
+    <!-- PROJECTS(detail) -->
+    <section class="section03 detail">
+      <h2 class="ir-text">PROJECTS detail</h2>
+      <div class="accordion-list accordion-project">
         <div class="accordion-item">
           <div class="accordion-tit">
-            <p>원형 그래프 컴포넌트</p>
+            <p>미래에셋생명 헬스케어 구축</p>
             <button type="button"></button>
           </div>
           <div class="accordion-content">
-            <p>1. 100% 원형 그래프</p>
-            <p class="text-inner">circleGraphType1(그래프 클래스, 최소값, 최대값, value값);</p>
-            <div class="graph-item">
-              <div class="circlebar_wrap">
-                <div class="circlebar-item">
-                  <svg width="126" height="126" viewBox="0 0 140 140" class="circlebar-type1 circlebar-green circlebar-js1">
-                    <circle r="60" cx="70" cy="70" class="circle-border"></circle>
-                    <circle r="60" cx="70" cy="70" class="circle-progress"></circle>
-                  </svg>
-                  <div class="circle-txtbox">
-                    <p class="circlebar_txt"></p>
-                  </div>
-                </div>
-              </div>
-              <p class="text-inner">circleGraphType1(".circlebar-js1", 0, 100, 50);</p>
+            <div class="detail-top">
+                <p><strong class="detail-tit">개요</strong>사용자의 건강을 관리하고 올바른 습관 형성을 유도하며, 데이터를 시각적으로 제공</p>
+                <p><strong class="detail-tit">기간</strong>2024.07 - 2024.11</p>
+                <p><strong class="detail-tit">기여도</strong>퍼블리싱 100%</p>
+                <p><strong class="detail-tit">작업</strong>컴포넌트 및 전체 페이지 퍼블리싱</p>
             </div>
-            <div class="graph-item">
-              <div class="circlebar_wrap">
-                  <div class="circlebar-item">
-                    <svg width="126" height="126" viewBox="0 0 140 140" class="circlebar-type1 circlebar-blue circlebar-js2">
-                      <circle r="60" cx="70" cy="70" class="circle-border"></circle>
-                      <circle r="60" cx="70" cy="70" class="circle-progress"></circle>
-                    </svg>
-                    <div class="circle-txtbox">
-                      <p class="circlebar_txt"></p>
-                    </div>
-                  </div>
-              </div>
-              <p class="text-inner">circleGraphType1(".circlebar-js2", 0, 100, 80);</p>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">html5</li>
+                <li class="techchip">scss</li>
+                <li class="techchip">js</li>
+                <li class="techchip">github</li>
+                <li class="techchip">figma</li>
+                <li class="techchip">jira</li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <div class="accordion-tit">
-            <p>막대바 그래프 컴포넌트</p>
+            <p>현대 N브랜드 리뉴얼</p>
             <button type="button"></button>
           </div>
           <div class="accordion-content">
-            <p>1. 막대바 그래프</p>
-            <p class="text-inner">basicBarFun(그래프 클래스, value값);</p>
-            <div class="graph-item">
-              <div class="bar_wrap">
-                <div class="bar-item">
-                  <div class="bar bar-js"></div>
-                </div>
-              </div>
-              <p class="text-inner">basicBarFun(".bar-js01", 70);</p>
+            <div class="detail-top">
+                <p><strong class="detail-tit">개요</strong>현대자동차의 고성능 브랜드 소개 페이지로, 레이싱카 회원들이 UI에 쉽게 접근할 수 있도록 최적화된 페이지 제공</p>
+                <p><strong class="detail-tit">기간</strong>2024.05 - 2024.07</p>
+                <p><strong class="detail-tit">기여도</strong>퍼블리싱 100%</p>
+                <p><strong class="detail-tit">작업</strong>컴포넌트 및 전체 페이지 퍼블리싱</p>
             </div>
-            <p>2. 쌓이는 막대바 그래프</p>
-            <p class="text-inner">stackBarFun(그래프 클래스, [{ name: 해당 바 이름, width: 바 값, bgcolor: 바 색상 }]);</p>
-            <div class="graph-item">
-              <div class="stacked-barwrap mt-4 stackedbar-js">
-                <div class="bar-item">
-                  <div class="eachbar"><span class="eachbar-value"></span></div>
-                  <div class="eachbar"><span class="eachbar-value"></span></div>
-                  <div class="eachbar"><span class="eachbar-value"></span></div>
-                </div>
-              </div>
-              <p class="text-inner">
-                stackBarFun(".stackedbar-js", [
-                { name: "국어", width: 30, bgcolor: "#88C721" },
-                { name: "영어", width: 40, bgcolor: "#FCC946" },
-                { name: "수학", width: 40, bgcolor: "#5CA7FF" }
-              ]);</p>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">html5</li>
+                <li class="techchip">scss</li>
+                <li class="techchip">jquery</li>
+                <li class="techchip">github</li>
+                <li class="techchip">figma</li>
+              </ul>
             </div>
           </div>
         </div>
+        <div class="accordion-item">
+          <div class="accordion-tit">
+            <p>LG 글로벌 페이지 운영</p>
+            <button type="button"></button>
+          </div>
+          <div class="accordion-content">
+            <div class="detail-top">
+                <p><strong class="detail-tit">개요</strong>LG 글로벌 사용자의 사용성 및 편의성을 위해 Global One Platform을 운영</p>
+                <p><strong class="detail-tit">기간</strong>2023.11 - 2024.04</p>
+                <p><strong class="detail-tit">기여도</strong>퍼블리싱 100%</p>
+                <p><strong class="detail-tit">작업</strong>오픈 예정인 각 국가 페이지 퍼블리싱</p>
+            </div>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">pug</li>
+                <li class="techchip">scss</li>
+                <li class="techchip">js</li>
+                <li class="techchip">gitlab</li>
+                <li class="techchip">figma</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-tit">
+            <p>미디어로그 기업형 메시지 홈페이지 구축</p>
+            <button type="button"></button>
+          </div>
+          <div class="accordion-content">
+            <div class="detail-top">
+                <p><strong class="detail-tit">개요</strong>개인 및 단체 사업자가 브랜드를 등록해 기존 문자를 진화시킨 차세대 모바일 커뮤니케이션 서비스를 제공</p>
+                <p><strong class="detail-tit">기간</strong>2023.05 - 2023.10</p>
+                <p><strong class="detail-tit">기여도</strong>퍼블리싱 100%</p>
+                <p><strong class="detail-tit">작업</strong>전체 페이지 퍼블리싱</p>
+            </div>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">vue2</li>
+                <li class="techchip">scss</li>
+                <li class="techchip">js</li>
+                <li class="techchip">gitlab</li>
+                <li class="techchip">figma</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-tit">
+            <p>LG전자 컨텐츠 운영</p>
+            <button type="button"></button>
+          </div>
+          <div class="accordion-content">
+            <div class="detail-top">
+                <p><strong>개요</strong>사용자들에게 매달 다양한 기획전 및 이벤트를 통해 정보 제공</p>
+                <p><strong>기간</strong>2022.06 - 2023.04</p>
+                <p><strong>기여도</strong>퍼블리싱 100%</p>
+                <p><strong>작업</strong>기획전, 이벤트, B2B, 오픈마켓 페이지 퍼블리싱</p>
+            </div>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">html5</li>
+                <li class="techchip">css</li>
+                <li class="techchip">js</li>
+                <li class="techchip">wcms</li>
+                <li class="techchip">photoshop</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-tit">
+            <p>현대카드 법인 모바일 구축</p>
+            <button type="button"></button>
+          </div>
+          <div class="accordion-content">
+            <div class="detail-top">
+                <p><strong class="detail-tit">개요</strong>현대카드 법인 사용자를 위한 화면 개선으로 사용성 향상</p>
+                <p><strong class="detail-tit">기간</strong>2022.03 - 2022.06</p>
+                <p><strong class="detail-tit">기여도</strong>퍼블리싱 70%</p>
+                <p><strong class="detail-tit">작업</strong>고객센터, 업무지원, 혜택, 카드 상세페이지 퍼블리싱</p>
+            </div>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">html5</li>
+                <li class="techchip">css</li>
+                <li class="techchip">jquery</li>
+                <li class="techchip">svn</li>
+                <li class="techchip">jira</li>
+                <li class="techchip">zeplin</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-tit">
+            <p>아모레퍼시픽 사이트 운영</p>
+            <button type="button"></button>
+          </div>
+          <div class="accordion-content">
+            <div class="detail-top">
+                <p><strong class="detail-tit">개요</strong>아모레퍼시픽의 다양한 브랜드 자사 홈페이지 운영</p>
+                <p><strong class="detail-tit">기간</strong>2022.01 - 2022.02</p>
+                <p><strong class="detail-tit">기여도</strong>퍼블리싱 50%</p>
+                <p><strong class="detail-tit">작업</strong>pdp 페이지 퍼블리싱</p>
+            </div>
+            <div class="detail-btm">
+              <strong class="detail-tit">기술</strong>
+              <ul class="techlist">
+                <li class="techchip">html5</li>
+                <li class="techchip">css</li>
+                <li class="techchip">jquery</li>
+                <li class="techchip">photoshop</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <section class="section04 about">
+      <h2 class="about-top">ABOUT ME</h2>
+      <div class="about-btm">
+        <div class="imgbox">
+          <img src="./assets/img/main/dahyun_character.jpg" alt="남다현 캐릭터 이미지">
+        </div>
+        <div class="box">
+          <div>
+            <p>이름</p>
+            <p>남다현</p>
+          </div>
+          <div>
+            <p>이메일</p>
+            <p class="font14">dahyun123410@gmail.com</p>
+          </div>
+          <div>
+            <p>학력</p>
+            <p>안동대학교<br/> 신소재공학전공</p>
+            <p>2014.03 - 2018.02</p>
+          </div>
+          <div>
+            <p>교육이수</p>
+            <p>웹디자인 과정 이수</p>
+            <p>SBS아카데미 컴퓨터아트<br/> 대구지점</p>
+            <p>2021.01 - 2021.11</p>
+          </div>
+          <div>
+            <p>경력</p>
+            <p>더피프피원</p>
+            <p>2022.01 - 2024.01</p>
+            <p>더피프피원엑스</p>
+            <p>2024.02 ~ 현재</p>
+          </div>
+          <div>
+            <p>자격증</p>
+            <p>GTQ 그래픽기술자격</p>
+            <p>인터넷정보기술(ITQ)</p>
+            <p>컴퓨터활용능력2급</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section05 introduce">
+      <h2 class="ir-text">introduce</h2>
+      <div>
+        <p>MY KEYWORD</p>
+        <ol>
+          <li>1. EXPERIENCE</li>
+          <li>2. LEARNING</li>
+          <li>3. METICULOUS</li>
+          <li>4. POSITIVE</li>
+        </ol>
       </div>
     </section>
   </main>
-  <!-- 푸터 -->
+  <!-- footer -->
   <footer>
     <p>THANK YOU</p>
     <p>Copyright 2024. DaHyunNam All rights reserved.</p>
   </footer>
-  <!-- 스크립트 -->
-  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/gsapcustom.js"></script>
   <script src="./assets/js/component.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      accordionFun(".accordion-project",0);
+    });
+  </script>
 </body>
 </html>
+
