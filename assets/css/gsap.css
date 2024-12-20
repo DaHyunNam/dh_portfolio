@@ -1,4 +1,10 @@
 /* section 전체 */
+body {
+  overflow-x: hidden;
+}
+.only-mo {
+  display: none;
+}
 section {
   height: 100vh;
 }
@@ -9,20 +15,26 @@ section {
 }
 .section01 .container {
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
+.section01 .container > .textbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .section01 .text01, 
 .section01 .text02 {
   font-size: 100px;
-  color: #FFFCE1;
+  color: #fff;
 }
 .section01 .text01 {
   padding: 0 6px;
-  font-weight: 300;
+  font-weight: 400;
   display: none;
 }
 .section01 .text02 {
@@ -32,9 +44,9 @@ section {
 }
 .section01 .text03 {
   text-align: center;
-  color: black;
-  font-size: 130px;
-  font-weight: 400;
+  color:#0E100F;
+  font-size: 100px;
+  font-weight: 700;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -42,10 +54,10 @@ section {
 }
 .section01 .text03-active01 {
   background: #0E100F;
-  color: #FFFCE1;
+  color: #fff;
 }
 .section01 .text03-active02 {
-  background: #FFFCE1;
+  background: #fff;
   color: #0E100F;
 }
 .section01 .container.final .text01, 
@@ -54,7 +66,7 @@ section {
 }
 .section01 .container.plain .text03 {
   background: transparent;
-  color: #FFFCE1;
+  color: #fff;
   padding: 0;
 }
 .section01 .container.columns .text03 {
@@ -63,10 +75,10 @@ section {
   flex-basis: 1;
   display: block;
 }
-.section01 .container.columns .text03.text03-active01{
-  color: #FFFCE1;
+.section01 .container.columns .text03.text03-active01 {
+  color: #fff;
   background: #0E100F;
-  font-size: 130px;
+  font-size: 120px;
   width: 100%;
 }
 .section01 .container.columns .text03.text03-active02 {
@@ -76,29 +88,197 @@ section {
 /* section02 */
 .section02 {
   background-color: #0E100F;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
 }
 .section02 .project-top {
   width: 100%;
-  position: relative;
-}
-.section02 .project-top h2 {
-  font-size: 130px;
-  color: #fff;
   padding: 20px;
 }
+.section02 .project-top h2 {
+  font-size: 120px;
+  color: #fff;
+}
+/* .section02 .project-top .more {
+  background-color: #fff;
+  min-width: 180px;
+  height: 32px;
+  display: block;
+  position: relative;
+}
+.section02 .project-top .more-btn {
+  padding: 6px 12px;
+  color: #fff;
+  background-color: #0E100F;
+  border: 1px solid #fff;
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+  min-width: 180px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+} */
 .section02 .project-btm {
   display: flex;
   flex-direction: row;
   width: max-content;
 }
-.section02 .project-btm > .box {
-  height: 100vh;
-  padding: 40px;
+.section02 .project-btm .box {
+  position: relative;
+  padding: 0 20px;
 }
-.section02 .project-btm > .box > div {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: #fff;
+.section02 .project-btm .box img {
+  max-width: 700px;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  opacity: 0.6;
+}
+.section02 .project-btm .box .box-inner {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: calc(100% - 40px);
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 20px;
+}
+.section02 .project-btm .box .box-inner .chip {
+  background-color: #0E100F;
+  color: #fff;
+  min-width: 180px;
+  height: 32px;
+  display: block;
+  position: relative;
+}
+.section02 .project-btm .box .box-inner .chip span {
+  padding: 6px 12px;
+  color: #0E100F;
+  background-color: #fff;
+  border: 1px solid #0E100F;
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+  min-width: 180px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+.section02 .project-btm .box .box-inner .title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+}
+.section02 .project-btm .box .box-inner .date {
+  color: #fff;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+}
+.section02 .project-btm02 {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section02 .project-btm02 p {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.section03 .accordion-list {
+  display: flex;
+  flex-direction: column;
+}
+.section03 .accordion-list .accordion-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;    
+  overflow: hidden;
+  padding: calc(28 / 16 * 1rem) 0 calc(20 / 16 * 1rem);
+  border-bottom: 1px solid  #0E100F;
+}
+.section03 .accordion-list .accordion-item .accordion-tit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: calc(16 / 16 * 1rem);
+  align-items: center;
+}
+.section03 .accordion-list .accordion-item .accordion-tit p {
+  width: calc(100% - 24px);
+  font-size: calc(36 / 16 * 1rem);                   
+  font-weight: 800;
+  text-align: left;
+}
+.section03 .accordion-list .accordion-item .accordion-tit button {
+  cursor: pointer;
+  display: inline-flex;
+  width: calc(24 / 16 * 1rem);  
+  height: calc(24 / 16 * 1rem);
+  transition: all 0.3s;
+  background: url('../img/icon/plus_icon24_bl.png') no-repeat center;
+  background-size: contain;
+}
+.section03 .accordion-list .accordion-item.is-active .accordion-tit button {
+  background: url('../img/icon/minus_icon24_bl.png') no-repeat center;
+  background-size: contain;
+}
+.section03 .accordion-list .accordion-item .accordion-content {
+  height: 0;    
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  width: 100%;
+}
+.section03 .accordion-list .accordion-item.is-active .accordion-content {
+  display: block;    
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease-in;
+}
+
+@media screen and (max-width:767px) {
+  .section01 .text01, 
+  .section01 .text02 {
+    font-size: 40px;
+    padding: 0 3px;
+  }
+  .section01 .text03 {
+    font-size: 40px;
+    padding: 0 3px;
+  }
+  .section01 .container.columns .text03.text03-active01 {
+    font-size: 48px;
+  }
+  .section02 .project-top {
+    width: 100%;
+    gap: 8px;
+    padding: 10px;
+  }
+  .section02 .project-top h2 {
+    font-size: 40px;
+    color: #fff;
+    width: 100%;
+  }
+  .section02 .project-top .more {
+    background-color: transparent;
+    min-width: 120px;
+  }
+  .section02 .project-top .more-btn {
+    font-size: 16px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-width: 120px;
+  }
 }

@@ -13,7 +13,7 @@ const originalTexts = {
 
 function nextState() {
     if (layouts[(curLayout + 1) % layouts.length] === "columns") {
-        document.querySelector(".section01 .text03.text03-active01").textContent = "Nice to meet you";
+        document.querySelector(".section01 .text03.text03-active01").textContent = "WELCOME";
         document.querySelector(".section01 .text03.text03-active02").textContent = "";
     } else {
         document.querySelector(".section01 .text03.text03-active01").textContent = originalTexts.active01;
@@ -44,14 +44,29 @@ gsap.delayedCall(1, nextState);
 
 // section02
 gsap.to(".project-btm", {
-    x: () => -document.querySelector(".project-btm").scrollWidth + window.innerWidth,
+    x: () => {
+        const boxes = document.querySelectorAll(".project-btm .box");
+        const boxCount = boxes.length;
+        const boxWidth = 700;
+        const padding = 20;
+        const totalWidth = boxCount * (boxWidth + padding * 2); // 박스들의 총 길이 계산
+        return -(totalWidth - window.innerWidth + 20); // 음수로 설정해야지 왼쪽으로 스크롤 가능
+    },
     ease: "none",
     scrollTrigger: {
-        trigger: ".section02",
-        start: "top top",
-        end: () => "+=" + (document.querySelector(".project-btm").scrollWidth - window.innerWidth + document.querySelector(".project-top").offsetHeight), // 가로 스크롤 끝까지
-        scrub: true,
-        pin: ".section02",
-        anticipatePin: 1,
+        trigger: ".section02", // 스크롤 트리거를 설정할 요소
+        start: "top top", // 스크롤 시작 위치 (".section02" 상단이 화면 상단과 만날 때)
+        end: () => {
+            const boxes = document.querySelectorAll(".project-btm .box");
+            const boxCount = boxes.length;
+            const boxWidth = 700;
+            const padding = 20;
+            const projectTop = document.querySelector(".project-top");
+            const totalWidth = boxCount * (boxWidth + padding * 2);
+            return "+=" + (totalWidth - window.innerWidth + projectTop.offsetHeight + 20); // 가로 스크롤 거리(totalWidth - window.innerWidth) , `projectTop.offsetHeight`를 추가하여 상단 영역의 높이도 포함
+        },
+        scrub: true, // 스크롤과 애니메이션을 동기화
+        pin: ".section02", // ".section02"를 고정 (핀)
+        anticipatePin: 1, // 핀을 미리 잡아주는 정도 설정 (부드러운 애니메이션)
     },
 });
