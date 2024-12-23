@@ -116,74 +116,74 @@ function animateSection03() {
         },
     });
 }
-// section04
-function animateSection04() {
+// section05
+function animatesection05() {
     if (isMobile()) {
-        gsap.from(".section04 .about-top", {
+        gsap.from(".section05 .about-top", {
             y: 100,
             opacity: 0,
             duration: 1,
             ease: "power2.out",
             scrollTrigger: {
-                trigger: ".section04",
+                trigger: ".section05",
                 start: "top 90%",
                 toggleActions: "play none none reverse",
             },
         });
-        gsap.from(".section04 .about-btm .imgbox", {
+        gsap.from(".section05 .about-btm .imgbox", {
             y: 100,
             opacity: 0,
             duration: 1,
             ease: "power2.out",
             scrollTrigger: {
-                trigger: ".section04 .about-btm",
+                trigger: ".section05 .about-btm",
                 start: "top 70%",
                 toggleActions: "play none none reverse",
             },
         });
-        gsap.from(".section04 .about-btm .box", {
+        gsap.from(".section05 .about-btm .box", {
             y: 100, 
             opacity: 0,
             duration: 1,
             ease: "power2.out",
             stagger: 0.2,
             scrollTrigger: {
-                trigger: ".section04 .about-btm",
+                trigger: ".section05 .about-btm",
                 start: "top 50%",
                 toggleActions: "play none none reverse",
             },
         });
     } else {
-        gsap.from(".section04 .about-top", {
+        gsap.from(".section05 .about-top", {
             x: -100,
             opacity: 0,
             duration: 1,
             ease: "power2.out",
             scrollTrigger: {
-                trigger: ".section04",
+                trigger: ".section05",
                 start: "top 80%",
                 toggleActions: "play none none reverse",
             },
         });
-        gsap.from(".section04 .about-btm .imgbox", {
+        gsap.from(".section05 .about-btm .imgbox", {
             x: -100,
             opacity: 0,
             duration: 1,
             ease: "power2.out",
             scrollTrigger: {
-                trigger: ".section04 .about-btm",
+                trigger: ".section05 .about-btm",
                 start: "top 80%",
                 toggleActions: "play none none reverse",
             },
         });
-        gsap.from(".section04 .about-btm .box", {
+        gsap.from(".section05 .about-btm .box", {
             x: 100,
             opacity: 0,
             duration: 1,
             ease: "power2.out",
             stagger: 0.2,
             scrollTrigger: {
-                trigger: ".section04 .about-btm",
+                trigger: ".section05 .about-btm",
                 start: "top 80%",
                 toggleActions: "play none none reverse",
             },
@@ -191,41 +191,41 @@ function animateSection04() {
     }
 }
 
-// section05 (텍스트 복사 - pc,mo 동일)
-function loopHorizontalScroll() {
-    const list = document.querySelector(".section05 ol");
-    const items = Array.from(list.children);
-    const listWidth = list.offsetWidth;
+// section07 (텍스트 복사 - pc,mo 동일)
+// function loopHorizontalScroll() {
+//     const list = document.querySelector(".section07 ol");
+//     const items = Array.from(list.children);
+//     const listWidth = list.offsetWidth;
 
-    items.forEach((item) => {
-        const clone = item.cloneNode(true);
-        list.appendChild(clone);
-    });
-}
+//     items.forEach((item) => {
+//         const clone = item.cloneNode(true);
+//         list.appendChild(clone);
+//     });
+// }
 
-//section05 (pc,mo 동일)
-function animateSection05() {
-    gsap.from(".section05", {
-        y: 100,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".section05",
-            start: "top 80%",
-            toggleActions: "play none none reverse",
-        },
-    });
-}
+//section07 (pc,mo 동일)
+// function animatesection07() {
+//     gsap.from(".section07", {
+//         y: 100,
+//         opacity: 0,
+//         duration: 1,
+//         ease: "power2.out",
+//         scrollTrigger: {
+//             trigger: ".section07",
+//             start: "top 80%",
+//             toggleActions: "play none none reverse",
+//         },
+//     });
+// }
 
-//전체 section05 (pc,mo 동일)
-function animateSection05Wrapper() {
-    loopHorizontalScroll(); 
-    animateSection05(); 
-}
+//전체 section07 (pc,mo 동일)
+// function animatesection07Wrapper() {
+//     loopHorizontalScroll(); 
+//     animatesection07(); 
+// }
 
 animateSection01();
 animateSection02();
 animateSection03();
-animateSection04();
-animateSection05Wrapper();
+animatesection05();
+// animatesection07Wrapper();
