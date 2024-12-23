@@ -1,5 +1,9 @@
 body {
   overflow-x: hidden;
+  color: #0E100F;
+}
+.only-mo {
+  display: none;
 }
 
 /* section 전체 */
@@ -117,7 +121,7 @@ footer {
 .section02 {
   background-color: #fff;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
 }
 .section02 .project-top {
@@ -129,7 +133,7 @@ footer {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: visible;
-  margin-top: calc(200 / 16 * 1rem);
+  margin: calc(80 / 16 * 1rem) 0;
 }
 .section02 .project-btm .box {
   position: relative;
@@ -193,6 +197,13 @@ footer {
 }
 
 /* section03 */
+.section03 .detail-title {
+  font-size: calc(100 / 16 * 1rem);
+  line-height: calc(100 / 16 * 1rem);
+  margin-bottom: calc(50 / 16 * 1rem);
+  padding: 0 calc(20 / 16 * 1rem);
+  word-break: break-all;
+}
 .section03 .accordion-list {
   display: flex;
   flex-direction: column;
@@ -352,10 +363,24 @@ footer {
   font-weight: 400;
   word-break: break-all;
 }
+.section04 .about-btm02 {
+  margin-top: calc(50 / 16 * 1rem);
+  padding: 0 calc(20 / 16 * 1rem);
+}
+.section04 .about-btm02 .point {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: calc(12 / 16 * 1rem);
+}
+.section04 .about-btm02 .point > div {
+  flex: 0 0 calc((100% /3) - 4px);
+}
 
 /* section05 */
 .section05 {
-  margin-top: calc(100 / 16 * 1rem);
+  margin-top: calc(50 / 16 * 1rem);
   background-color: #0E100F;
   position: relative;
   overflow: hidden; 
@@ -401,6 +426,9 @@ footer {
   }
 }
 @media screen and (max-width: 767px) {
+  .only-mo {
+    display: block;
+  }
   section h2 {
     font-size: calc(40 / 16 * 1rem);
   }
@@ -446,6 +474,12 @@ footer {
   .section02 .project-btm .box .box-inner .date {
     font-size: calc(16 / 16 * 1rem);
     line-height: calc(20 / 16 * 1rem);
+  }
+  .section03 .detail-title {
+    font-size: calc(50 / 16 * 1rem);
+    line-height: calc(50 / 16 * 1rem);
+    padding: 0 calc(16 / 16 * 1rem);
+    word-break: keep-all;
   }
   .section03 .accordion-list .accordion-item {
     padding: calc(28 / 16 * 1rem) calc(16 / 16 * 1rem) calc(20 / 16 * 1rem);

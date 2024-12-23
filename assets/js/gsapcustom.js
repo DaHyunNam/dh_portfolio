@@ -102,6 +102,20 @@ function animateSection02() {
     }
 }
 
+// section03  (pc, mo 동일)
+function animateSection03() {
+    gsap.from(".section03 .detail-title", {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".section03",
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+        },
+    });
+}
 // section04
 function animateSection04() {
     if (isMobile()) {
@@ -212,5 +226,6 @@ function animateSection05Wrapper() {
 
 animateSection01();
 animateSection02();
+animateSection03();
 animateSection04();
 animateSection05Wrapper();
