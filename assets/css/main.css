@@ -115,7 +115,7 @@ footer {
 
 /* section02 */
 .section02 {
-  background-color: #0E100F;
+  background-color: #fff;
   height: 100vh;
   overflow-x: hidden;
   position: relative;
@@ -123,12 +123,13 @@ footer {
 .section02 .project-top {
   width: 100%;
   padding: calc(20 / 16 * 1rem);
-  color: #fff;
+  color: #000;
 }
 .section02 .project-btm {
   display: flex;
-  flex-direction: row;
-  width: max-content;
+  flex-wrap: nowrap;
+  overflow-x: visible;
+  margin-top: calc(200 / 16 * 1rem);
 }
 .section02 .project-btm .box {
   position: relative;
@@ -139,7 +140,8 @@ footer {
   height: auto;
   display: block;
   border-radius: 20px;
-  opacity: 0.4;
+  opacity: 0.8;
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.10);
 }
 .section02 .project-btm .box .box-inner {
   position: absolute;
@@ -202,6 +204,7 @@ footer {
   overflow: hidden;
   padding: calc(28 / 16 * 1rem) calc(20 / 16 * 1rem) calc(20 / 16 * 1rem);
   border-bottom: 1px solid #0E100F;
+  position: relative;
 }
 .section03 .accordion-list .accordion-item .accordion-tit {
   width: 100%;
@@ -236,6 +239,9 @@ footer {
   transition: all 0.3s ease-in;
   width: 100%;
 }
+.section03 .accordion-list .accordion-item .accordion-content .detail-top {
+  position: relative;
+}
 .section03 .accordion-list .accordion-item .accordion-content .detail-top p {
   font-size: calc(20 / 16 * 1rem);
   line-height: calc(20 / 16 * 1rem);            
@@ -257,6 +263,8 @@ footer {
   display: flex;
   flex-direction: column;
   gap: calc(12 / 16 * 1rem);
+  position: relative;
+  z-index: 1;
 }
 .section03 .accordion-list .accordion-item .accordion-content .detail-btm .techlist {
   display: flex;
@@ -278,7 +286,23 @@ footer {
   width: 100%;
   height: auto;
   transition: all 0.3s ease-in;
-  padding-top: calc(50 / 16 * 1rem);
+  padding: calc(50 / 16 * 1rem) 0 calc(150 / 16 * 1rem);
+}
+.section03 .accordion-list .accordion-item:not(.is-active) .accordion-content .detail-num {
+  opacity: 0;
+}
+.section03 .accordion-list .accordion-item.is-active .accordion-content .detail-num {
+  position: absolute;
+  bottom: 0;
+  right: calc(6 / 16 * 1rem);
+  font-size: calc(150 / 16 * 1rem);
+  z-index: 0;
+  color: #fff;
+  -webkit-text-stroke: 3px #000;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  opacity: 0;
+  animation: opacityEffect 0.5s ease-in forwards;
+  animation-delay: 0.5s;
 }
 
 /* section04 */
@@ -331,7 +355,7 @@ footer {
 
 /* section05 */
 .section05 {
-  margin-top: calc(50 / 16 * 1rem);
+  margin-top: calc(100 / 16 * 1rem);
   background-color: #0E100F;
   position: relative;
   overflow: hidden; 
@@ -344,11 +368,12 @@ footer {
   padding: calc(20 / 16 * 1rem);
 }
 .section05 ol {
+  padding: calc(20 / 16 * 1rem) 0;
   display: flex;
   align-items: center;
   gap: calc(16 / 16 * 1rem);
   white-space: nowrap; 
-  animation: scrollEffect 40s linear infinite;
+  animation: scrollEffect 30s linear infinite;
 }
 .section05 ol li {
   font-size: calc(30 / 16 * 1rem);
@@ -367,7 +392,14 @@ footer {
     transform: translate3d(-100%, 0, 0);
   }
 }
-
+@keyframes opacityEffect {
+  0% { 
+    opacity: 0;
+  }
+  100% { 
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 767px) {
   section h2 {
     font-size: calc(40 / 16 * 1rem);
@@ -384,11 +416,36 @@ footer {
   .section01 .container.columns .text03.text03-active01 {
     font-size: calc(48 / 16 * 1rem);
   }
+  .section02 {
+    height: auto;
+    position: relative;
+    overflow-x: visible;
+  }
   .section02 .project-top {
     width: 100%;
     padding: calc(16 / 16 * 1rem);
     font-size: calc(40 / 16 * 1rem);
-    color: #fff;
+  }
+  .section02 .project-btm {
+    display: flex;
+    flex-direction: column;
+    margin: calc(50 / 16 * 1rem) 0;
+    gap: calc(32 / 16 * 1rem);
+  }
+  .section02 .project-btm .box {
+    position: relative;
+    padding: 0 calc(20 / 16 * 1rem);
+  }
+  .section02 .project-btm .box img {
+    max-width: 100%;
+  }
+  .section02 .project-btm .box .box-inner .title {
+    font-size: calc(24 / 16 * 1rem);
+    line-height: calc(24 / 16 * 1rem);
+  }
+  .section02 .project-btm .box .box-inner .date {
+    font-size: calc(16 / 16 * 1rem);
+    line-height: calc(20 / 16 * 1rem);
   }
   .section03 .accordion-list .accordion-item {
     padding: calc(28 / 16 * 1rem) calc(16 / 16 * 1rem) calc(20 / 16 * 1rem);
@@ -411,6 +468,12 @@ footer {
   .section03 .accordion-list .accordion-item .accordion-content .detail-btm .techchip {
     font-size: calc(16 / 16 * 1rem);
     min-width: calc(78 / 16 * 1rem);
+  }
+  .section03 .accordion-list .accordion-item.is-active .accordion-content {
+    padding: calc(50 / 16 * 1rem) 0 calc(75 / 16 * 1rem);
+  }
+  .section03 .accordion-list .accordion-item.is-active .accordion-content .detail-num {
+    font-size: calc(75 / 16 * 1rem);
   }
   .section04 {
     margin-top: calc(50 / 16 * 1rem);
