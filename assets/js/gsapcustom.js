@@ -121,7 +121,7 @@ function animateSection03() {
 function animateSection04() {
     const featureList = document.querySelectorAll(".section04>ol>li");
 
-    gsap.set(featureList, { opacity: 0, y: 50 });
+    // gsap.set(featureList, { opacity: 0, y: 50 });
 
     // 각 list
     gsap.to(featureList, {
