@@ -57,8 +57,8 @@ function animateSection02() {
 
         // 각 box
         gsap.to(boxes, {
-            opacity: 1,
             y: 0,
+            opacity: 1,
             duration: 1,
             ease: "power2.out",
             stagger: 0.2,
@@ -116,6 +116,31 @@ function animateSection03() {
         },
     });
 }
+
+// section04 (pc, mo 동일)
+function animateSection04() {
+    const featureList = document.querySelectorAll(".section04>ol>li");
+
+    gsap.set(featureList, { opacity: 0, y: 50 });
+
+    // 각 list
+    gsap.to(featureList, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: ".section04",
+            start: "top 70%",
+            end: "bottom top",
+            toggleActions: "play none none reverse",
+            scrub: 0.5,
+            toggleClass: "is-active",
+        },
+    });
+}
+
 // section05
 function animatesection05() {
     if (isMobile()) {
@@ -191,41 +216,8 @@ function animatesection05() {
     }
 }
 
-// section07 (텍스트 복사 - pc,mo 동일)
-// function loopHorizontalScroll() {
-//     const list = document.querySelector(".section07 ol");
-//     const items = Array.from(list.children);
-//     const listWidth = list.offsetWidth;
-
-//     items.forEach((item) => {
-//         const clone = item.cloneNode(true);
-//         list.appendChild(clone);
-//     });
-// }
-
-//section07 (pc,mo 동일)
-// function animatesection07() {
-//     gsap.from(".section07", {
-//         y: 100,
-//         opacity: 0,
-//         duration: 1,
-//         ease: "power2.out",
-//         scrollTrigger: {
-//             trigger: ".section07",
-//             start: "top 80%",
-//             toggleActions: "play none none reverse",
-//         },
-//     });
-// }
-
-//전체 section07 (pc,mo 동일)
-// function animatesection07Wrapper() {
-//     loopHorizontalScroll(); 
-//     animatesection07(); 
-// }
-
 animateSection01();
 animateSection02();
 animateSection03();
+animateSection04();
 animatesection05();
-// animatesection07Wrapper();
