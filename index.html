@@ -341,10 +341,10 @@
           <p class="each-txt">GTQ 그래픽기술자격</p>
           <p class="each-txt">인터넷정보기술(ITQ)</p>
           <p class="each-txt">컴퓨터활용능력2급</p>
+          <p class="each-txt">2종보통 운전면허</p>
         </div>
         <div class="box-each">
-          <p>detail</p>
-          </p>
+          <button onclick="scrollToSection03()">View Project</button>
         </div>
       </div>
     </section>
@@ -357,13 +357,22 @@
   <script src="./assets/js/gsapcustom.js"></script>
   <script src="./assets/js/component.js"></script>
   <script>
+    function scrollToSection03() {
+      const targetSection = document.querySelector(".section03");
+      const targetPosition = targetSection.offsetTop; 
+      window.scrollTo({
+        top: targetPosition, 
+        behavior: "smooth",
+      });
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
       accordionFun(".accordion-project", 0);
       animateSection01();
       animateSection02();
       animateSection03();
       animateSection04();
-      animatesection05();
+      scrollToSection03();
     });
   </script>
 </body>
