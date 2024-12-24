@@ -215,9 +215,3 @@ function animatesection05() {
         });
     }
 }
-
-animateSection01();
-animateSection02();
-animateSection03();
-animateSection04();
-animatesection05();

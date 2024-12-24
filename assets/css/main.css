@@ -505,6 +505,7 @@ footer {
   section h2 {
     font-size: calc(40 / 16 * 1rem);
   }
+  /* section01 */
   .section01 .text01, 
   .section01 .text02 {
     font-size: calc(40 / 16 * 1rem);
@@ -517,6 +518,7 @@ footer {
   .section01 .container.columns .text03.text03-active01 {
     font-size: calc(48 / 16 * 1rem);
   }
+  /* section02 */
   .section02 {
     height: auto;
     position: relative;
@@ -548,10 +550,11 @@ footer {
     font-size: calc(16 / 16 * 1rem);
     line-height: calc(20 / 16 * 1rem);
   }
+  /* section03 */
   .section03 .detail-title {
-    font-size: calc(50 / 16 * 1rem);
-    line-height: calc(50 / 16 * 1rem);
-    padding: 0 calc(16 / 16 * 1rem);
+    font-size: 11.2vw;
+    line-height: 11.2vw;
+    padding: calc(16 / 16 * 1rem) calc(16 / 16 * 1rem) 0;
     word-break: keep-all;
   }
   .section03 .accordion-list .accordion-item {
@@ -603,6 +606,7 @@ footer {
     width: calc(80 / 16 * 1rem);
     height: calc(80 / 16 * 1rem);
   }
+  /* section05 */
   .section05 {
     margin-top: calc(50 / 16 * 1rem);
   }

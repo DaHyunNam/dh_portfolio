@@ -64,7 +64,18 @@
   </div>
   </section>
   
-  <script src="./assets/js/main.js"></script>
   <script src="./assets/js/component.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      accordionFun(".acc-default",0);
+      circleGraphType1(".circlebar-js2", 0, 100, 80);
+      basicBarFun(".bar-js", 70);
+      stackBarFun(".stackedbar-js", [
+        { name: "국어", width: 30, bgcolor: "#88C721" },
+        { name: "영어", width: 30, bgcolor: "#FCC946" },
+        { name: "수학", width: 40, bgcolor: "#5CA7FF" }
+      ]);
+    });
+  </script>
 </body>
 </html>
