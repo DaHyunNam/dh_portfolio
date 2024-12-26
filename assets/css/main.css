@@ -462,7 +462,10 @@ footer {
   transform: scale(1.5);
   transition: all 0.3s;
 }
-
+.section05 .about-box .box-each:last-child button:active {
+  transform: scale(1);
+  transition: all 0.3s;
+}
 
 /* animation effect */
 @keyframes scrollEffect {
@@ -670,7 +673,6 @@ footer {
     line-height: calc(16 / 16 * 1rem);
     padding-right: calc(24 / 16 * 1rem);
   }
-  
   .section05 .about-box .box-each:last-child button::after {
     background: url('../img/icon/arrow_top_icon24_bl.png') no-repeat center;
     background-size: contain;
