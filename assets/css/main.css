@@ -460,11 +460,9 @@ footer {
 }
 .section05 .about-box .box-each:last-child button:hover {
   transform: scale(1.5);
-  transition: all 0.3s;
 }
-.section05 .about-box .box-each:last-child button:active {
+.section05 .about-box .box-each:last-child button:visited {
   transform: scale(1);
-  transition: all 0.3s;
 }
 
 /* animation effect */
